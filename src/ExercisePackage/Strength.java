@@ -15,8 +15,8 @@ public class Strength extends Exercise {
 
     @Override
     public String toString() {
-        return "Intensity:" + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
-                repetitions + ", Sets" + sets + "\n" + "Weights: " + weightsInKg + " kg" + "\n" +
+        return "Intensity: " + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
+                repetitions + ", Sets: " + sets + "\n" + "Weights: " + weightsInKg + " kg" + "\n" +
                 "Equipment: " + equipment;
     }
 
