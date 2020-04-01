@@ -4,7 +4,7 @@ public class Endurance extends Exercise {
 
     String equipment;
 
-    public Endurance(int intensity, int duration, int repetitions, int sets) {
+    public Endurance(int intensity, int duration, int repetitions, int sets, String equipment) {
         super(intensity, duration, repetitions, sets);
 
         this.equipment = equipment;
