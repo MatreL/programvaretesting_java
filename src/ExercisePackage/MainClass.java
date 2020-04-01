@@ -17,8 +17,15 @@ public class MainClass {
         Flexibility Peder = new Flexibility(20,60,10,3,"Yoga pants");
         System.out.println(Peder.toString());
 
+        System.out.println("----------------");
+
         Endurance Even = new Endurance(5, 30, 2, 1, "Shoes");
         System.out.println(Even.toString());
+
+        System.out.println("----------------");
+
+        Balance Alex = new Balance(2, 10, 15, 4, "fitness ball");
+        System.out.println(Alex.toString());
 
     }
 }
