@@ -4,7 +4,7 @@ public class Endurance extends Exercise {
 
     String equipment;
 
-    public Endurance(int intensity, int duration, int repetitions, int sets){
+    public Endurance(int intensity, int duration, int repetitions, int sets) {
         super(intensity, duration, repetitions, sets);
 
         this.equipment = equipment;
@@ -14,4 +14,5 @@ public class Endurance extends Exercise {
     public String toString() {
         return "Intensity:" + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
                 repetitions + ", Sets" + sets + "\n" + "Equipment: " + equipment;
+    }
 }
