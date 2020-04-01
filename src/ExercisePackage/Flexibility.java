@@ -9,4 +9,12 @@ public class Flexibility extends Exercise {
 
         this.equipment = equipment;
     }
+
+    @Override
+    public String toString() {
+        return "Intensity: " + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
+                repetitions + " x " + sets + "\n" +
+                "Equipment: " + equipment;
+    }
+
 }

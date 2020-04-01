@@ -6,9 +6,16 @@ public class MainClass {
         System.out.println(ex01.toString());
 
         System.out.println("----------------");
+        System.out.println("----Strength----");
 
         Strength Olav = new Strength(10,30,8,4,100,"Bench");
         System.out.println(Olav.toString());
+
+        System.out.println("----------------");
+        System.out.println("--Flexibility---");
+
+        Flexibility Peder = new Flexibility(20,60,10,3,"Yoga pants");
+        System.out.println(Peder.toString());
 
     }
 }
