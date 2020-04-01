@@ -6,7 +6,7 @@ public class MainClass {
         System.out.println(ex01.toString());
 
         System.out.println("----------------");
-        System.out.println("    Strength");
+        System.out.println("Strength");
 
         Strength Olav = new Strength(10,30,8,4,100,"Bench");
         System.out.println(Olav.toString());
@@ -18,11 +18,13 @@ public class MainClass {
         System.out.println(Peder.toString());
 
         System.out.println("----------------");
+        System.out.println("Endurance");
 
         Endurance Even = new Endurance(5, 30, 2, 1, "Shoes");
         System.out.println(Even.toString());
 
         System.out.println("----------------");
+        System.out.println("Balance");
 
         Balance Alex = new Balance(2, 10, 15, 4, "fitness ball");
         System.out.println(Alex.toString());
