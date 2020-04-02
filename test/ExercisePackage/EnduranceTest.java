@@ -19,15 +19,7 @@ public class EnduranceTest {
 
         assertEquals("Test to check that string equipment works", "Shoes", testEndurance.equipment);
     }
-    @Test
-    public void intensityTest(){
 
-        int high = 10;
-        int low = 0;
-        assertTrue("Error, intensity is too high", high >= testEndurance.intensity);
-        assertTrue("Error, intensity is too low",  low  <= testEndurance.intensity);
-        System.out.println("Test passed: " + testEndurance.intensity + " is within " + high + " and " + low);
-    }
     @Test
     public void stringTest(){
 
