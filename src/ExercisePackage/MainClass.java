@@ -20,7 +20,7 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Endurance");
 
-        Endurance Even = new Endurance(5, 30, 2, 1, "Shoes");
+        Endurance Even = new Endurance(5, 30, 2, 3, "Shoes");
         System.out.println(Even.toString());
 
         System.out.println("----------------");

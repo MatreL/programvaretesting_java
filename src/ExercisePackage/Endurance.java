@@ -12,7 +12,7 @@ public class Endurance extends Exercise {
 
     @Override
     public String toString() {
-        return "Intensity:" + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
-                repetitions + ", Sets" + sets + "\n" + "Equipment: " + equipment;
+        return "Intensity: " + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
+                repetitions + " x " + sets + "\n" + "Equipment: " + equipment;
     }
 }
