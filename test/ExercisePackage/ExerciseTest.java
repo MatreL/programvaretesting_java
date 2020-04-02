@@ -21,6 +21,7 @@ public class ExerciseTest {
     public void testToString() {
     }
 
+    // Checking if intensity is between 0 and 10
     @Test
     public void intensityTest(){
 
@@ -30,6 +31,42 @@ public class ExerciseTest {
         assertTrue("Error, intensity is too high", high >= testExercise.intensity);
         assertTrue("Error, intensity is too low",  low  <= testExercise.intensity);
         System.out.println("Test passed: " + testExercise.intensity + " is within " + high + " and " + low);
+    }
+
+    // Checking if name is empty
+    @Test
+    public void nameNotEmpty() {
+        stringIsEmpty(testExercise.name);
+    }
+
+    @Test
+    public void intNotEmpty() {
+        intIsEmpty(testExercise.intensity);
+        intIsEmpty(testExercise.duration);
+        intIsEmpty(testExercise.repetitions);
+        intIsEmpty(testExercise.sets);
+    }
+
+    // Method to check if a string is empty
+    public void stringIsEmpty(String a) {
+
+        boolean nameNotEmpty = true;
+
+        if (a == "") {
+            nameNotEmpty = false;
+        }
+        assertTrue("Check if string is empty",nameNotEmpty);
+    }
+
+    // Method to check if an int is empty
+    public void intIsEmpty(int a) {
+
+        boolean intNotEmpty = true;
+
+        if (a == 0) {
+            intNotEmpty = false;
+        }
+        assertTrue("Check if int is empty",intNotEmpty);
     }
 
 
