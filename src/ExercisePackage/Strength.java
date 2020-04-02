@@ -2,10 +2,10 @@ package ExercisePackage;
 
 public class Strength extends Exercise {
 
-    int weightsInKg;
+    double weightsInKg;
     String equipment;
 
-    public Strength(int intensity, int duration, int repetitions, int sets, int weightsInKg, String equipment){
+    public Strength(int intensity, int duration, int repetitions, int sets, double weightsInKg, String equipment){
         super(intensity, duration, repetitions, sets);
 
         this.weightsInKg = weightsInKg;

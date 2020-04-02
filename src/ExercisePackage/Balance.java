@@ -20,5 +20,3 @@ public class Balance extends Exercise {
 
 }
 
-
-
