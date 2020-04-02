@@ -11,7 +11,7 @@ public class FlexibilityTest {
 
         Flexibility testFlexibility = new Flexibility(5, 30, 3, 5, "Yoga mat");
 
-        assertEquals();
+        assertEquals("Test to check that string equipment works", "Yoga mat", testFlexibility.equipment);
     }
 
 }
