@@ -2,13 +2,15 @@ package ExercisePackage;
 
 public class Exercise {
     public int intensity, duration, repetitions, sets;
+    public String name;
 
     public String printExercise() {
         return "exercise";
     }
 
 
-    public Exercise(int intensity, int duration, int repetitions, int sets) {
+    public Exercise(String name, int intensity, int duration, int repetitions, int sets) {
+        this.name = name;
         this.intensity = intensity;
         this.duration = duration;
         this.repetitions = repetitions;

@@ -9,7 +9,7 @@ public class FlexibilityTest {
     @Test
     public void testToString() {
 
-        Flexibility testFlexibility = new Flexibility(5, 30, 3, 5, "Yoga mat");
+        Flexibility testFlexibility = new Flexibility("Lil p", 5, 30, 3, 5, "Yoga mat");
 
         assertEquals("Test to check that string equipment works", "Yoga mat", testFlexibility.equipment);
     }
