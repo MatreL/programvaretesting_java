@@ -29,5 +29,13 @@ public class MainClass {
         Exercise Alex = new Balance("Man 5",2, 10, 15, 4, "fitness ball");
         System.out.println(Alex.toString());
 
+        System.out.println("----------------");
+        System.out.println("Programs");
+
+        Program p1 = new Program();
+        System.out.println(p1.toString());
+
+
+
     }
 }

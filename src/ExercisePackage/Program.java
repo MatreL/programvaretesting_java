@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Program {
     public ArrayList<Exercise> exercises = new ArrayList<>();
-    int duration;
-    int intensityLevel;
+    int duration = getDuration();
+    int intensityLevel = getIntensityLevel();
 
     public int getDuration(){
         int duration = 0;
@@ -20,6 +20,9 @@ public class Program {
         }
         return intensityLevel;
     }
-
+    @Override
+    public String toString(){
+        return ("Duration is: " + duration + "\nIntensity is: " + intensityLevel);
+    }
 
 }
