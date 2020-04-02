@@ -9,7 +9,7 @@ public class StrengthTest {
     @Test
     public void testToString() {
 
-        Strength testStrength = new Strength(10,60,7,3,17.5,"Manuals");
+        Strength testStrength = new Strength("Olav", 10,60,7,3,17.5,"Manuals");
 
         assertEquals("To see if i could use decimal-numbers",17.5, testStrength.weightsInKg, .01);
 
