@@ -8,19 +8,19 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Strength");
 
-        Strength Olav = new Strength("Man 2",10,30,8,4,100,"Bench");
+        Exercise Olav = new Strength("Man 2",10,30,8,4,100,"Bench");
         System.out.println(Olav.toString());
 
         System.out.println("----------------");
         System.out.println("Flexibility");
 
-        Flexibility Peder = new Flexibility("Man 3",20,60,10,3,"Yoga pants");
+        Exercise Peder = new Flexibility("Man 3",20,60,10,3,"Yoga pants");
         System.out.println(Peder.toString());
 
         System.out.println("----------------");
         System.out.println("Endurance");
 
-        Endurance Even = new Endurance("Man 4", 5, 30, 2, 3, "Shoes");
+        Exercise Even = new Endurance("Man 4", 5, 30, 2, 3, "Shoes");
         System.out.println(Even.toString());
 
         System.out.println("----------------");
