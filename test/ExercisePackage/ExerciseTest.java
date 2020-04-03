@@ -52,7 +52,7 @@ public class ExerciseTest {
 
         boolean nameNotEmpty = true;
 
-        if (a == "") {
+        if (a.equals("")) {
             nameNotEmpty = false;
         }
         assertTrue("Check if string is empty",nameNotEmpty);
