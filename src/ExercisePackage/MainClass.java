@@ -1,5 +1,7 @@
 package ExercisePackage;
 
+import java.util.ArrayList;
+
 public class MainClass {
     public static void main(String[] args) {
         Exercise ex01 = new Exercise("Man1", 3,30,5,3);
@@ -32,7 +34,12 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Programs");
 
-        Program p1 = new Program();
+        ArrayList<Exercise> exercises = new ArrayList<>();
+
+        Program p1 = new Program("Program nr 1");
+        exercises.add(Alex);
+        exercises.add(Even);
+        p1.addExercise(exercises);
         System.out.println(p1.toString());
 
 
