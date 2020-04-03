@@ -16,7 +16,7 @@ public class Exercise {
         this.repetitions = repetitions;
         this.sets = sets;
 
-        if (name.equals("") || intensity < 0 || intensity >= 10 || duration == 0 || repetitions == 0 || sets == 0){
+        if (name.equals("") || intensity <= 0 || intensity > 10 || duration == 0 || repetitions == 0 || sets == 0){
             throw new IllegalArgumentException("Invalid value");
         }
 

@@ -16,7 +16,7 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Flexibility");
 
-        Exercise Peder = new Flexibility("Man 3",20,60,10,3,"Yoga pants");
+        Exercise Peder = new Flexibility("Man 3",9,60,10,3,"Yoga pants");
         System.out.println(Peder.toString());
 
         System.out.println("----------------");
