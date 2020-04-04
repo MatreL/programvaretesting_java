@@ -74,10 +74,7 @@ public class ExerciseTest {
 
         assertFalse("Negative numbers is not allowed",  lowNumber  > testExercise.intensity ||
                 lowNumber > testExercise.sets || lowNumber > testExercise.repetitions || lowNumber > testExercise.duration);
-        System.out.println("Test passed: " + testExercise.intensity + " is not below zero");
-        System.out.println("Test passed: " + testExercise.duration + " is not below zero");
-        System.out.println("Test passed: " + testExercise.repetitions + " is not below zero");
-        System.out.println("Test passed: " + testExercise.sets + " is not below zero");
+        System.out.println("Test passed: None of the numbers are below zero");
     }
 
 
