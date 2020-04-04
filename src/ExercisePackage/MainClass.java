@@ -8,25 +8,25 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Strength");
 
-        Exercise Olav = new Strength("Man 2","Bench",10,30,8,4,100);
+        Exercise Olav = new Strength("Mannen","Bench",10,30,8,4,100);
         System.out.println(Olav.toString());
 
         System.out.println("----------------");
         System.out.println("Flexibility");
 
-        Exercise Peder = new Flexibility("Man 3","Yoga pants",9,60,10,3);
+        Exercise Peder = new Flexibility("Mannto","Yoga pants",9,60,10,3);
         System.out.println(Peder.toString());
 
         System.out.println("----------------");
         System.out.println("Endurance");
 
-        Exercise Even = new Endurance("Man 4", "Shoes",1, 30, 10, 2 );
+        Exercise Even = new Endurance("Man tRe", "Shoes",1, 30, 10, 2 );
         System.out.println(Even.toString());
 
         System.out.println("----------------");
         System.out.println("Balance");
 
-        Exercise Alex = new Balance("Man 5","Fitness ball", 2, 1, 15, 4);
+        Exercise Alex = new Balance("Man-fire","Fitness ball", 2, 1, 15, 4);
         System.out.println(Alex.toString());
 
         System.out.println("----------------");

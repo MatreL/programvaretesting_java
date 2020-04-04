@@ -72,8 +72,7 @@ public class ExerciseTest {
     }
 
     @Test
-    public void numericStrings() {
-
+    public void alphabeticStrings() {
         boolean isNAN = true;
 
         // Creates a regex to include what is allowed in the strings
@@ -84,8 +83,6 @@ public class ExerciseTest {
 
         isNAN = testExercise.equipment.matches(regex);
         assertTrue("Checking if name and equiment only contains letters and space", isNAN);
-
     }
-
 
 }

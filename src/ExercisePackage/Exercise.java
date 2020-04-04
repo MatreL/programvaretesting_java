@@ -16,7 +16,7 @@ public class Exercise {
         emptyString();
         emptyInt();
         emptyOrInvalidIntensity();
-
+        onlyAllowLetters();
     }
 
     public void emptyString() {
@@ -44,12 +44,25 @@ public class Exercise {
     }
 
     public void emptyOrInvalidIntensity(){
-
         if (intensity < 1 || intensity > 10) {
             throw new IllegalArgumentException("The value of the intensity has to be between 1 and 10.");
         }
     }
 
+    // Create a method to only allow lowercase, uppercase, space and dash in name and equipment
+    public void onlyAllowLetters(){
 
+        boolean containsLettersOnly = true;
+        String regex = "^[A-Za-z\\s-]+$";
+
+        String nameAndEquipment = name + equipment;
+        containsLettersOnly = nameAndEquipment.matches(regex);
+
+        if (!containsLettersOnly) {
+            throw new IllegalArgumentException("We only accept uppercase, lowercase, space and/or dash when inserting " +
+                    "values to name and equipment");
+        }
+
+    }
 
 }
