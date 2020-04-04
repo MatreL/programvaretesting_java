@@ -16,7 +16,7 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person("even", "strengt", 2);
+        Person p1 = new Person("Even", "Strength", 2);
     }
 
 

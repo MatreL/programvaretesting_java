@@ -26,7 +26,7 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Balance");
 
-        Exercise Alex = new Balance("Man 5","Fitness ball", 2, 10, 15, 4);
+        Exercise Alex = new Balance("Man 5","Fitness ball", 2, 1, 15, 4);
         System.out.println(Alex.toString());
 
         System.out.println("----------------");

@@ -5,7 +5,7 @@ public class Exercise {
     public String name, equipment;
 
 
-    public Exercise(String name, String equipment, int intensity, int duration, int repetitions, int sets) throws IllegalArgumentException {
+    public Exercise(String name, String equipment, int intensity, int duration, int repetitions, int sets) {
         this.name = name;
         this.equipment = equipment;
         this.intensity = intensity;
