@@ -3,6 +3,10 @@ import java.util.ArrayList;
 
 public class Program {
     public ArrayList<Exercise> exercises = new ArrayList<>();
+    public String programName;
+    public Program(String programName){
+        this.programName = programName;
+    }
 
     public void addExercise(ArrayList<Exercise> exercises) {this.exercises=exercises;}
 
@@ -11,7 +15,7 @@ public class Program {
         String programDetails;
         int duration = 0;
         int intensityLevel = 0;
-        programDetails = "This is the exercises: ";
+        programDetails = "The name of this program is:\n" + programName + "\nAnd his is the exercises: ";
         for (int i = 0; i<exercises.size();i++){
            duration = exercises.get(i).duration + duration;
            programDetails += "\n" + exercises.get(i) +"\n\n";
