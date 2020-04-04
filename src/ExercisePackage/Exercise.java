@@ -4,10 +4,6 @@ public class Exercise {
     public int intensity, duration, repetitions, sets;
     public String name;
 
-    public String printExercise() {
-        return "exercise";
-    }
-
 
     public Exercise(String name, int intensity, int duration, int repetitions, int sets) throws IllegalArgumentException {
         this.name = name;
@@ -21,4 +17,7 @@ public class Exercise {
             throw new IllegalArgumentException("Invalid value");
         }
     }
+
+
+
 }

@@ -13,14 +13,6 @@ public class ExerciseTest {
         testExercise = new Exercise("Exercise", 7, 2, 8,4);
     }
 
-    @Test
-    public void printExercise() {
-    }
-
-    @Test
-    public void testToString() {
-    }
-
     // Checking if intensity is between 0 and 10
     @Test
     public void intensityTest(){
