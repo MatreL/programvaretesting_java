@@ -10,7 +10,7 @@ public class ExerciseTest {
 
     @Before
     public void setup() {
-        testExercise = new Exercise("Exercise","workout clothes", 7, 2, 8,4);
+        testExercise = new Exercise("Exercise","workout-clothes", 7, 2, 8,4);
     }
 
     // Checking if intensity is between 0 and 10
@@ -63,12 +63,28 @@ public class ExerciseTest {
     }
 
     @Test
-    public void negativeNumbers(){
+    public void negativeNumbers() {
         int lowNumber = 0;
 
         assertFalse("Negative numbers is not allowed",  lowNumber  > testExercise.intensity ||
                 lowNumber > testExercise.sets || lowNumber > testExercise.repetitions || lowNumber > testExercise.duration);
         System.out.println("Test passed: None of the numbers are below zero");
+    }
+
+    @Test
+    public void numericStrings() {
+
+        boolean isNAN = true;
+
+        // Creates a regex to include what is allowed in the strings
+        String regex = "^[A-Za-z\\s-]+$";
+
+        isNAN = testExercise.name.matches(regex);
+        assertTrue("Checking if name and equiment only contains letters and space", isNAN);
+
+        isNAN = testExercise.equipment.matches(regex);
+        assertTrue("Checking if name and equiment only contains letters and space", isNAN);
+
     }
 
 
