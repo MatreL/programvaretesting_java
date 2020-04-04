@@ -2,11 +2,12 @@ package ExercisePackage;
 
 public class Exercise {
     public int intensity, duration, repetitions, sets;
-    public String name;
+    public String name, equipment;
 
 
-    public Exercise(String name, int intensity, int duration, int repetitions, int sets) throws IllegalArgumentException {
+    public Exercise(String name, String equipment, int intensity, int duration, int repetitions, int sets) throws IllegalArgumentException {
         this.name = name;
+        this.equipment = equipment;
         this.intensity = intensity;
         this.duration = duration;
         this.repetitions = repetitions;
@@ -16,20 +17,17 @@ public class Exercise {
         emptyInt();
         emptyOrInvalidIntensity();
 
-        /* Makes if-statement to secure that it wont include valid values
-        if (name.equals("") || intensity <= 0 || intensity > 10 || duration <= 0 || repetitions <= 0 || sets <= 0){
-            throw new IllegalArgumentException("Invalid value");
-        }*/
     }
 
     public void emptyString() {
         if (name.equals("")) {
             throw new IllegalArgumentException("You need to give the exercise a name!");
+        } else if (equipment.equals("")) {
+            throw new IllegalArgumentException("You need to give the exercise equipment!");
         }
     }
 
     public void emptyInt(){
-
         String valueMissing = "";
 
         if (duration <= 0) {
@@ -51,5 +49,7 @@ public class Exercise {
             throw new IllegalArgumentException("The value of the intensity has to be between 1 and 10.");
         }
     }
+
+
 
 }

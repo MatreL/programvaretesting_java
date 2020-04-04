@@ -10,7 +10,7 @@ public class StrengthTest {
 
     @Before
     public void setup() {
-        testStrength = new Strength("Olav", 10,60,7,3,17.5,"Manuals");
+        testStrength = new Strength("Olav", "Manuals",10,60,7,3,17.5);
     }
 
     // Test made aware of weightsInKg to be an int, when wanted to be a double datatype

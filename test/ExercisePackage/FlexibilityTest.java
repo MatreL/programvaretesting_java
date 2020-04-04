@@ -11,7 +11,7 @@ public class FlexibilityTest {
 
     @Before
     public void setup() {
-        testFlexibility = new Flexibility("Lil p", 5, 30, 3, 5, "Yoga mat");
+        testFlexibility = new Flexibility("Lil p", "Yoga mat", 5, 30, 3, 5);
     }
 
     @Test

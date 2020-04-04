@@ -11,7 +11,7 @@ public class EnduranceTest {
 
     @Before
     public void setup() {
-        testEndurance = new Endurance("Lil E", 5, 5, 5, 5,"Shoes");
+        testEndurance = new Endurance("Lil E", "Shoes",5, 5, 5, 5);
     }
 
     @Test
