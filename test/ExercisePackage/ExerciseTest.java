@@ -10,7 +10,7 @@ public class ExerciseTest {
 
     @Before
     public void setup() {
-        testExercise = new Exercise("Exercise", 7, 30, 8,4);
+        testExercise = new Exercise("Exercise", 7, 2, 8,4);
     }
 
     @Test
@@ -67,6 +67,17 @@ public class ExerciseTest {
             intNotEmpty = false;
         }
         assertTrue("Check if int is empty",intNotEmpty);
+    }
+    @Test
+    public void negativeNumbers(){
+        int lowNumber = 0;
+
+        assertFalse("Negative numbers is not allowed",  lowNumber  > testExercise.intensity ||
+                lowNumber > testExercise.sets || lowNumber > testExercise.repetitions || lowNumber > testExercise.duration);
+        System.out.println("Test passed: " + testExercise.intensity + " is not below zero");
+        System.out.println("Test passed: " + testExercise.duration + " is not below zero");
+        System.out.println("Test passed: " + testExercise.repetitions + " is not below zero");
+        System.out.println("Test passed: " + testExercise.sets + " is not below zero");
     }
 
 
