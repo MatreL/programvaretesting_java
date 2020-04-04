@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Program {
     public ArrayList<Exercise> exercises = new ArrayList<>();
-   // int duration = setDuration();
-   // int intensityLevel = setIntensityLevel();
+    int duration = getDuration();
+ //   int intensityLevel = setIntensityLevel();
     public String programName;
     public Program(String programName){
         this.programName = programName;
@@ -12,13 +12,15 @@ public class Program {
 
     public void addExercise(ArrayList<Exercise> exercises) {this.exercises=exercises;}
 
-    public int setDuration(){
+
+    public int getDuration(){
         int duration = 0;
-        for (Exercise ex:exercises){
-            duration += ex.duration;
+        for (int i = 0; i<exercises.size(); i++){
+            exercises.get(i).duration += duration;
         }
         return duration;
     }
+
     public int setIntensityLevel(){
         int intensityLevel = 0;
         for (Exercise ex:exercises){
@@ -26,17 +28,19 @@ public class Program {
         }
         return intensityLevel;
     }
-  //  @Override
-  //  public String toString(){
-  //      return ("Duration is: " + duration + "\nIntensity is: " + intensityLevel);
-  //  }
+
 
     @Override
     public String toString(){
         String programDetails;
+        int duration;
+        duration = 0;
         programDetails = "This is the exercises: ";
-        for (Exercise ex:exercises){
-            programDetails += ex.toString() +"\n\n";
+        for (int i = 0; i<exercises.size();i++){
+           duration = exercises.get(i).duration + duration;
+           duration = duration *2;
+            programDetails += exercises.toString() +"\n\n" + "Duration is: " + duration;
+
         }
         return programDetails;
     }

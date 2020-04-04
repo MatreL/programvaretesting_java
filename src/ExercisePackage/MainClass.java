@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class MainClass {
     public static void main(String[] args) {
-        Exercise ex01 = new Exercise("Man1", "A body", 3,30,5,3);
-        System.out.println(ex01.toString());
 
         System.out.println("----------------");
         System.out.println("Strength");
@@ -39,6 +37,7 @@ public class MainClass {
         Program p1 = new Program("Program nr 1");
         exercises.add(Alex);
         exercises.add(Even);
+        exercises.add(Peder);
         p1.addExercise(exercises);
         System.out.println(p1.toString());
 
