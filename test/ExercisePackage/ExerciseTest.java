@@ -27,8 +27,9 @@ public class ExerciseTest {
 
     // Checking if name is empty
     @Test
-    public void nameNotEmpty() {
+    public void stringNotEmpty() {
         stringIsEmpty(testExercise.name);
+        stringIsEmpty(testExercise.equipment);
     }
 
     @Test
@@ -60,6 +61,7 @@ public class ExerciseTest {
         }
         assertTrue("Check if int is empty",intNotEmpty);
     }
+
     @Test
     public void negativeNumbers(){
         int lowNumber = 0;
