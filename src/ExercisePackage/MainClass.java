@@ -22,7 +22,7 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Endurance");
 
-        Exercise Even = new Endurance("Man 4", 5, 30, 2, 3, "Shoes");
+        Exercise Even = new Endurance("Man 4", 1, 30, 10, 2, "Shoes");
         System.out.println(Even.toString());
 
         System.out.println("----------------");
