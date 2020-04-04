@@ -38,10 +38,12 @@ public class Program {
         programDetails = "This is the exercises: ";
         for (int i = 0; i<exercises.size();i++){
            duration = exercises.get(i).duration + duration;
-           duration = duration *2;
-            programDetails += exercises.toString() +"\n\n" + "Duration is: " + duration;
-
+           programDetails += "\n" + exercises.get(i) +"\n\n";
         }
+
+        duration = duration * 2;
+        programDetails += "Duration is: " + duration;
+
         return programDetails;
     }
 
