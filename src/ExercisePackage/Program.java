@@ -30,6 +30,33 @@ public class Program {
         programDetails += "Duration is: " + duration + "\n";
         programDetails += "Intensity level " + intensityLevel;
 
+        boolean balanceBoolean = false;
+        boolean enduranceBoolean = false;
+        boolean flexiblilityBoolean = false;
+        boolean strengthBoolean = false;
+
+        for (Exercise exercise : exercises) {
+            if (exercise instanceof Balance) {
+                balanceBoolean = true;
+            }
+            if (exercise instanceof Endurance) {
+                enduranceBoolean = true;
+            }
+            if (exercise instanceof Flexibility) {
+                flexiblilityBoolean = true;
+            }
+            if (exercise instanceof Strength) {
+                strengthBoolean = true;
+            }
+        }
+
+        // If all the booleans are true this is a balanced system, else they're not
+        if (balanceBoolean && enduranceBoolean && flexiblilityBoolean && strengthBoolean) {
+                 programDetails += "\nThis program is balanced.";
+            } else {
+                 programDetails += "\nThis program is NOT balanced";
+            }
+
         return programDetails;
     }
 

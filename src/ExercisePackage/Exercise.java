@@ -52,7 +52,7 @@ public class Exercise {
     // Create a method to only allow lowercase, uppercase, space and dash in name and equipment
     public void onlyAllowLetters(){
 
-        boolean containsLettersOnly = true;
+        boolean containsLettersOnly;
         String regex = "^[A-Za-z\\s-]+$";
 
         String nameAndEquipment = name + equipment;
