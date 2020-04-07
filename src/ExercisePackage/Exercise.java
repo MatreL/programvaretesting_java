@@ -72,4 +72,7 @@ public class Exercise {
 
     }
 
+    public int getIntensity() {
+        return intensity;
+    }
 }

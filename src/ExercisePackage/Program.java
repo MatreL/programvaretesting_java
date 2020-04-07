@@ -1,5 +1,6 @@
 package ExercisePackage;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Program {
     private ArrayList<Exercise> exercises = new ArrayList<>();
@@ -42,11 +43,12 @@ public class Program {
     }
 
     public void sortExercise(){
-
+        Collections.sort(exercises, (o1, o2) -> (o1.getIntensity()) - (o2.getIntensity()));
     }
 
 
     public void print() {
+        sortExercise();
         System.out.print("The name of the program is \n");
         System.out.print(programName + "\n");
         System.out.print("And this is the exercises: \n" );
