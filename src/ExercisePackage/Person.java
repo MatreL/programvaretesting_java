@@ -4,20 +4,15 @@ import java.util.ArrayList;
 
 public class Person {
 
+
     public ArrayList<Exercise> exercises = new ArrayList<>();
-    private String name;
-    private String preferredExercise;
-    private int acceptableIntensity;
+    public String preferredExercise;
+    public int acceptableIntensity;
+    public Object acceptableProgram;
 
-    public Person(String name, String preferredExercise, int acceptableIntensity){
-        this.name = name;
-        this.preferredExercise = preferredExercise;
+    public Person(String preferredExercise, int acceptableIntensity) {
         this.acceptableIntensity = acceptableIntensity;
+        this.preferredExercise = preferredExercise;
     }
-
-    public static void main(String[] args) {
-        Person p1 = new Person("Even", "Strength", 2);
-    }
-
 
 }
