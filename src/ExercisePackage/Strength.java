@@ -11,11 +11,15 @@ public class Strength extends Exercise {
     }
 
 
-    @Override
-    public String toString() {
+@Override
+    public String print() {
         return "Intensity: " + intensity + "\n" + "Duration: " + duration + "\n" + "Repetitions: " +
                 repetitions + " x " + sets + "\n" + "Weights: " + weightsInKg + " kg" + "\n" +
                 "Equipment: " + equipment;
+    }
+@Override
+    public String getType(){
+        return "Strength";
     }
 
 

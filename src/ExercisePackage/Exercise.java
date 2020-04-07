@@ -18,6 +18,13 @@ public class Exercise {
         emptyOrInvalidIntensity();
         onlyAllowLetters();
     }
+    public String getType(){
+        return "";
+    }
+
+    public String print(){
+        return "";
+    }
 
     public void emptyString() {
         if (name.equals("")) {

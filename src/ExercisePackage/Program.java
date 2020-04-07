@@ -2,62 +2,70 @@ package ExercisePackage;
 import java.util.ArrayList;
 
 public class Program {
-    public ArrayList<Exercise> exercises = new ArrayList<>();
-    public String programName;
-    public Program(String programName){
+    private ArrayList<Exercise> exercises = new ArrayList<>();
+    private String programName;
+    private int intensity = 0;
+    private int duration = 0;
+    private boolean isBalanced;
+
+    public Program(String programName) {
         this.programName = programName;
     }
 
-    public void addExercise(ArrayList<Exercise> exercises) {this.exercises=exercises;}
+    public void addExercise(ArrayList<Exercise> exercises) {
+        this.exercises = exercises;
+        for (int i = 0; i < exercises.size(); i++) {
+            this.duration += exercises.get(i).duration * 2;
+            if (this.intensity < exercises.get(i).intensity) {
+                this.intensity = exercises.get(i).intensity;
+            }
 
-    @Override
-    public String toString(){
-        String programDetails;
-        int duration = 0;
-        int intensityLevel = 0;
-        programDetails = "The name of this program is:\n" + programName + "\nAnd his is the exercises: ";
+        }
+        if (hasExercise("Endurance")
+                && hasExercise("Balance")
+                && hasExercise("Flexibility")
+                && hasExercise("Strength")) {
+            this.isBalanced = true;
+        }
+
+
+    }
+
+
+    public boolean hasExercise (String param) {
+        for (Exercise e:exercises) {
+            if (e.getType() == param) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void sortExercise(){
+
+    }
+
+
+    public void print() {
+        System.out.print("The name of the program is \n");
+        System.out.print(programName + "\n");
+        System.out.print("And this is the exercises: \n" );
         for (int i = 0; i<exercises.size();i++){
-           duration = exercises.get(i).duration + duration;
-           programDetails += "\n" + exercises.get(i) +"\n\n";
-
-           if(exercises.get(i).intensity>intensityLevel){
-               intensityLevel = exercises.get(i).intensity;
-           }
+            System.out.print(exercises.get(i).print() + "\n\n");
 
         }
-
-        duration = duration * 2;
-        programDetails += "Duration is: " + duration + "\n";
-        programDetails += "Intensity level " + intensityLevel;
-
-        boolean balanceBoolean = false;
-        boolean enduranceBoolean = false;
-        boolean flexiblilityBoolean = false;
-        boolean strengthBoolean = false;
-
-        for (Exercise exercise : exercises) {
-            if (exercise instanceof Balance) {
-                balanceBoolean = true;
-            }
-            if (exercise instanceof Endurance) {
-                enduranceBoolean = true;
-            }
-            if (exercise instanceof Flexibility) {
-                flexiblilityBoolean = true;
-            }
-            if (exercise instanceof Strength) {
-                strengthBoolean = true;
-            }
+        System.out.print("This is the total duration: " + this.duration + "\n");
+        if(isBalanced == true){
+            System.out.print("The program is balanced\n");
         }
+        else {
+            System.out.print("The program is not balanced\n");
+        }
+        System.out.println("The highest intensity is: " + this.intensity);
 
-        // If all the booleans are true this is a balanced system, else they're not
-        if (balanceBoolean && enduranceBoolean && flexiblilityBoolean && strengthBoolean) {
-                 programDetails += "\nThis program is balanced.";
-            } else {
-                 programDetails += "\nThis program is NOT balanced";
-            }
-
-        return programDetails;
     }
 
 }
+
+
+

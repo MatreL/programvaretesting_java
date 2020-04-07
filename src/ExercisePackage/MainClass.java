@@ -20,14 +20,15 @@ public class MainClass {
         System.out.println("----------------");
         System.out.println("Endurance");
 
-        Exercise Even = new Endurance("Man tRe", "Shoes",1, 30, 10, 2 );
-        System.out.println(Even.toString());
+        Exercise Even = new Endurance( "Man tRe", "Shoes",1, 30, 10, 2 );
+        System.out.println(Even.print());
 
         System.out.println("----------------");
         System.out.println("Balance");
 
-        Exercise Alex = new Balance("Man-fire","Fitness ball", 2, 1, 15, 4);
-        System.out.println(Alex.toString());
+        Exercise Alex = new Balance( "Man-fire","Fitness ball", 2, 1, 15, 4);
+        System.out.println(Alex.print());
+
 
         System.out.println("----------------");
         System.out.println("Programs");
@@ -38,8 +39,9 @@ public class MainClass {
         exercises.add(Alex);
         exercises.add(Even);
         exercises.add(Peder);
+        exercises.add(Olav);
         p1.addExercise(exercises);
-        System.out.println(p1.toString());
+        p1.print();
 
 
 
