@@ -44,13 +44,18 @@ public class Person {
 
     public void getAcceptableIntensity(ArrayList<Exercise> exercises) {
 
-        acceptableIntensity = 5;
+        boolean containsProgramWithIntensity = false;
 
         for (var j = 0; j < exercises.size(); j++) {
-            if ( acceptableIntensity >= exercises.get(j).getIntensity()) {
+            if ( acceptableIntensity == exercises.get(j).getIntensity() || acceptableIntensity + 1 == exercises.get(j).getIntensity()
+                || acceptableIntensity - 1 == exercises.get(j).getIntensity() ) {
                 System.out.println(exercises.get(j).print());
                 System.out.println("______________________________");
+                containsProgramWithIntensity = true;
             }
+        }
+        if (!containsProgramWithIntensity) {
+            System.out.println("There are no programs this intensity..");
         }
 
     }
@@ -60,7 +65,7 @@ public class Person {
 
     public static void main(String[] args) {
 
-        Person p1 = new Person("Strength",9,10);
+        Person p1 = new Person("Strength",4,10);
 
         Exercise Olav = new Strength("Mannen","Bench",1,30,8,4,100);
         Exercise Peder = new Flexibility("Mannto","Yoga pants",9,60,10,3);
