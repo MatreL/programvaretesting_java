@@ -10,9 +10,10 @@ public class Person {
     public int acceptableIntensity;
     public Object acceptableProgram;
 
-    public Person(String preferredExercise, int acceptableIntensity) {
+    public Person(String preferredExercise, int acceptableIntensity, Object acceptableProgram) {
         this.acceptableIntensity = acceptableIntensity;
         this.preferredExercise = preferredExercise;
+        this.acceptableProgram = acceptableProgram;
     }
 
 }
