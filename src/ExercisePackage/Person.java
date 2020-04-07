@@ -67,8 +67,8 @@ public class Person {
 
         Person p1 = new Person("Strength",4,10);
 
-        Exercise Olav = new Strength("Mannen","Bench",1,30,8,4,100);
-        Exercise Peder = new Flexibility("Mannto","Yoga pants",9,60,10,3);
+        Exercise Olav = new Strength("Man one","Bench",1,30,8,4,100);
+        Exercise Peder = new Flexibility("Man two","Yoga pants",9,60,10,3);
         Exercise Even = new Endurance( "Man tRe", "Shoes",5, 30, 10, 2 );
         Exercise Alex = new Balance( "Man-fire","Fitness ball", 2, 1, 15, 4);
 
