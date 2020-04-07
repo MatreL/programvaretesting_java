@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Person {
 
-
     public ArrayList<Exercise> exercises = new ArrayList<>();
     public String preferredExercise;
     public int acceptableIntensity;
@@ -43,9 +42,39 @@ public class Person {
         }
     }
 
+    public void getAcceptableIntensity(ArrayList<Exercise> exercises) {
+
+        acceptableIntensity = 5;
+
+        for (var j = 0; j < exercises.size(); j++) {
+            if ( acceptableIntensity >= exercises.get(j).getIntensity()) {
+                System.out.println(exercises.get(j).print());
+                System.out.println("______________________________");
+            }
+        }
+
+    }
+
+
+
+
     public static void main(String[] args) {
 
-        Person p1 = new Person("strength",9,10);
+        Person p1 = new Person("Strength",9,10);
+
+        Exercise Olav = new Strength("Mannen","Bench",1,30,8,4,100);
+        Exercise Peder = new Flexibility("Mannto","Yoga pants",9,60,10,3);
+        Exercise Even = new Endurance( "Man tRe", "Shoes",5, 30, 10, 2 );
+        Exercise Alex = new Balance( "Man-fire","Fitness ball", 2, 1, 15, 4);
+
+        ArrayList<Exercise> exercises = new ArrayList<>();
+
+        exercises.add(Alex);
+        exercises.add(Even);
+        exercises.add(Peder);
+        exercises.add(Olav);
+
+        p1.getAcceptableIntensity(exercises);
     }
 
 }
