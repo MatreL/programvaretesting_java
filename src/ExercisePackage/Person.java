@@ -46,10 +46,10 @@ public class Person {
 
         boolean containsProgramWithIntensity = false;
 
-        for (var j = 0; j < exercises.size(); j++) {
-            if ( acceptableIntensity == exercises.get(j).getIntensity() || acceptableIntensity + 1 == exercises.get(j).getIntensity()
-                || acceptableIntensity - 1 == exercises.get(j).getIntensity() ) {
-                System.out.println(exercises.get(j).print());
+        for (Exercise exercise : exercises) {
+            if (acceptableIntensity == exercise.getIntensity() || acceptableIntensity + 1 == exercise.getIntensity()
+                    || acceptableIntensity - 1 == exercise.getIntensity()) {
+                System.out.println(exercise.print());
                 System.out.println("______________________________");
                 containsProgramWithIntensity = true;
             }
