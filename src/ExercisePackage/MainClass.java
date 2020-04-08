@@ -19,7 +19,7 @@ public class MainClass {
 
         Exercise balance1 = new Balance("Handstand", "Mat", 8, 10, 10, 3);
         Exercise balance2 = new Balance("Headstand","Thick mat", 5, 15, 7, 2);
-        Exercise balance3 = new Balance( "LineWalk","Fitness ball", 6, 1, 15, 4);
+        Exercise balance3 = new Balance( "LineWalk","Slackline", 6, 1, 15, 4);
 
         ArrayList<Exercise> exercises = new ArrayList<>();
 
