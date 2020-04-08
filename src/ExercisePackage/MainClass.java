@@ -5,22 +5,29 @@ import java.util.ArrayList;
 public class MainClass {
     public static void main(String[] args) {
 
-        Exercise Olav = new Strength("Bench press","Bench",10,30,8,4,100);
-        Exercise Peder = new Flexibility("Yoga","Yoga pants",9,60,10,3);
-        Exercise Even = new Endurance( "Maraton", "Shoes",5, 30, 10, 2 );
-        Exercise Alex = new Balance( "LineWalk","Fitness ball", 6, 1, 15, 4);
+        Exercise strength1 = new Strength("Bench press","Bench",10,30,8,4,100);
+        Exercise strength2 = new Strength("Pullups", "Pull-up-bar", 9, 15, 10, 5, 15);
+        Exercise strength3 = new Strength("Biceps curl", "Manuals", 7, 10, 10,3, 22.5);
 
-        Exercise strength1 = new Strength("Hangups", "Pull bar",7,15,8,4, 15);
+        Exercise flex1 = new Flexibility("Shoulder stretch", "Stretch-Out-Strap", 7, 5, 4, 4);
+        Exercise flex2 = new Flexibility("Stretching", "Adjustable-Slant-Board", 3, 10, 8, 3);
+        Exercise flex3 = new Flexibility("Yoga","Yoga pants",9,60,10,3);
 
+        Exercise endurance1 = new Endurance("Cycling", "Bicycle", 10, 60, 3, 3);
+        Exercise endurance2 = new Endurance("Swimming", "Swimmingpool", 8, 20, 15, 2);
+        Exercise endurance3 = new Endurance( "Maraton", "Shoes",5, 30, 10, 2 );
 
+        Exercise balance1 = new Balance("Handstand", "Mat", 8, 10, 10, 3);
+        Exercise balance2 = new Balance("Headstand","Thick mat", 5, 15, 7, 2);
+        Exercise balance3 = new Balance( "LineWalk","Fitness ball", 6, 1, 15, 4);
 
         ArrayList<Exercise> exercises = new ArrayList<>();
 
         Program p1 = new Program("Program nr 1");
-        exercises.add(Alex);
-        exercises.add(Even);
-        exercises.add(Peder);
-        exercises.add(Olav);
+        exercises.add(strength1);
+        exercises.add(flex1);
+        exercises.add(endurance1);
+        exercises.add(balance1);
         p1.addExercise(exercises);
         p1.print();
 
