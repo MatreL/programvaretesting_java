@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Person {
 
-    public ArrayList<Exercise> exercises = new ArrayList<>();
+    public ArrayList<Exercise> programs = new ArrayList<>();
     public String preferredExercise;
     public int acceptableIntensity;
     public Object acceptableProgram;
@@ -15,6 +15,20 @@ public class Person {
         this.acceptableProgram = acceptableProgram;
 
         getPreferredExercise();
+        emptyString();
+        emptyOrNegativeInt();
+    }
+
+    public void emptyString() {
+        if (preferredExercise.equals("")) {
+            throw new IllegalArgumentException("You need to write your name!");
+        }
+    }
+
+    public void emptyOrNegativeInt() {
+        if (acceptableIntensity <= 0 || acceptableIntensity > 10) {
+            throw new IllegalArgumentException("You need to set a number between 1-10 as an acceptable intensity");
+        }
     }
 
     public void getPreferredExercise() {
@@ -53,7 +67,7 @@ public class Person {
                     || acceptableIntensity - 1 == ex.get(x).getIntensity()) {
 
                 if (preferredExercise.equals(ex.get(x).getType())) {
-                    System.out.println(ex.get(x).print());
+
                     System.out.println("------------------------");
                 }
 

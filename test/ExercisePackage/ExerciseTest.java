@@ -73,16 +73,16 @@ public class ExerciseTest {
 
     @Test
     public void alphabeticStrings() {
-        boolean isNAN = true;
+        boolean isNAN = false;
 
         // Creates a regex to include what is allowed in the strings
         String regex = "^[A-Za-z\\s-]+$";
 
         isNAN = testExercise.name.matches(regex);
-        assertTrue("Checking if name and equiment only contains letters and space", isNAN);
+        assertTrue("Checking if name and equipment only contains letters and space", isNAN);
 
         isNAN = testExercise.equipment.matches(regex);
-        assertTrue("Checking if name and equiment only contains letters and space", isNAN);
+        assertTrue("Checking if name and equipment only contains letters and space", isNAN);
     }
 
 }

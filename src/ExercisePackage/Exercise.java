@@ -38,7 +38,7 @@ public class Exercise {
         String valueMissing = "";
 
         if (duration <= 0) {
-            valueMissing = "a duration";
+            valueMissing = "duration";
         } else if (repetitions <= 0) {
             valueMissing = "repetitions";
         } else if (sets <= 0) {
@@ -46,7 +46,7 @@ public class Exercise {
         }
 
         if (!valueMissing.equals("")) {
-            throw new IllegalArgumentException("You have to set " + valueMissing + " to the exercise!");
+            throw new IllegalArgumentException("You have to give value to " + valueMissing + " to the exercise!");
         }
     }
 
