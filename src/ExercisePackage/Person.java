@@ -1,5 +1,6 @@
 package ExercisePackage;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Person {
@@ -42,32 +43,35 @@ public class Person {
         }
     }
 
-    public void getAcceptableIntensity(ArrayList<Exercise> exercises) {
+
+    public void setAcceptableProgram(ArrayList<Exercise> ex) {
 
         boolean containsProgramWithIntensity = false;
 
-        for (Exercise exercise : exercises) {
-            if (acceptableIntensity == exercise.getIntensity() || acceptableIntensity + 1 == exercise.getIntensity()
-                    || acceptableIntensity - 1 == exercise.getIntensity()) {
-                System.out.println(exercise.print());
-                System.out.println("______________________________");
+        for (int x = 0; x < ex.size(); x++) {
+
+            if (acceptableIntensity == ex.get(x).getIntensity() || acceptableIntensity + 1 == ex.get(x).getIntensity()
+                    || acceptableIntensity - 1 == ex.get(x).getIntensity()) {
+
+                if (preferredExercise.equals(ex.get(x).getType())) {
+                    System.out.println(ex.get(x).print());
+                    System.out.println("------------------------");
+                }
+
                 containsProgramWithIntensity = true;
             }
         }
+
         if (!containsProgramWithIntensity) {
-            System.out.println("There are no programs this intensity..");
+            throw new IllegalArgumentException("There are no programs with this intensity..");
         }
-
     }
-
-
-
 
     public static void main(String[] args) {
 
         Person p1 = new Person("Strength",4,10);
 
-        Exercise Olav = new Strength("Man one","Bench",1,30,8,4,100);
+        Exercise Olav = new Strength("Man one","Bench",3,30,8,4,100);
         Exercise Peder = new Flexibility("Man two","Yoga pants",9,60,10,3);
         Exercise Even = new Endurance( "Man tRe", "Shoes",5, 30, 10, 2 );
         Exercise Alex = new Balance( "Man-fire","Fitness ball", 2, 1, 15, 4);
@@ -79,7 +83,8 @@ public class Person {
         exercises.add(Peder);
         exercises.add(Olav);
 
-        p1.getAcceptableIntensity(exercises);
+
+        p1.setAcceptableProgram(exercises);
     }
 
 }
