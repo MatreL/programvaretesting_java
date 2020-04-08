@@ -1,6 +1,5 @@
 package ExercisePackage;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Person {
@@ -75,6 +74,8 @@ public class Person {
         Exercise Peder = new Flexibility("Man two","Yoga pants",9,60,10,3);
         Exercise Even = new Endurance( "Man tRe", "Shoes",5, 30, 10, 2 );
         Exercise Alex = new Balance( "Man-fire","Fitness ball", 2, 1, 15, 4);
+        Exercise Erik = new Strength("Bench press","Bench",5,30,8,4,100);
+
 
         ArrayList<Exercise> exercises = new ArrayList<>();
 
@@ -82,6 +83,7 @@ public class Person {
         exercises.add(Even);
         exercises.add(Peder);
         exercises.add(Olav);
+        exercises.add(Erik);
 
 
         p1.setAcceptableProgram(exercises);

@@ -5,33 +5,14 @@ import java.util.ArrayList;
 public class MainClass {
     public static void main(String[] args) {
 
-        System.out.println("----------------");
-        System.out.println("Strength");
+        Exercise Olav = new Strength("Bench press","Bench",10,30,8,4,100);
+        Exercise Peder = new Flexibility("Yoga","Yoga pants",9,60,10,3);
+        Exercise Even = new Endurance( "Maraton", "Shoes",5, 30, 10, 2 );
+        Exercise Alex = new Balance( "LineWalk","Fitness ball", 6, 1, 15, 4);
 
-        Exercise Olav = new Strength("Mannen","Bench",10,30,8,4,100);
-        System.out.println(Olav.print());
-
-        System.out.println("----------------");
-        System.out.println("Flexibility");
-
-        Exercise Peder = new Flexibility("Mannto","Yoga pants",9,60,10,3);
-        System.out.println(Peder.print());
-
-        System.out.println("----------------");
-        System.out.println("Endurance");
-
-        Exercise Even = new Endurance( "Man tRe", "Shoes",5, 30, 10, 2 );
-        System.out.println(Even.print());
-
-        System.out.println("----------------");
-        System.out.println("Balance");
-
-        Exercise Alex = new Balance( "Man-fire","Fitness ball", 6, 1, 15, 4);
-        System.out.println(Alex.print());
+        Exercise strength1 = new Strength("Hangups", "Pull bar",7,15,8,4, 15);
 
 
-        System.out.println("----------------");
-        System.out.println("Programs");
 
         ArrayList<Exercise> exercises = new ArrayList<>();
 
