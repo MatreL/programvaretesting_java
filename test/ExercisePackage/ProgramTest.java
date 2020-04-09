@@ -34,7 +34,6 @@ public class ProgramTest {
         exercises.add(testExercise);
 
         testProgram1.addExercise(exercises);
-        int highestIntensity = testProgram1.getIntensity();
 
         // Expects 9 to be the highest intensity after checking manually in the strength-exercises made in setup()
         assertEquals("Testing to see if the highest intensity in addExercise is working",9, testProgram1.getIntensity());
