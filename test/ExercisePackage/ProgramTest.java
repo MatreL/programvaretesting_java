@@ -41,7 +41,7 @@ public class ProgramTest {
     }
 
     @Test
-    public void hasExercise() {
+    public void exercisesIsBalanced() {
         ArrayList<Exercise> exercises = new ArrayList<>();
         Program testProgram1 = new Program("Test program 2");
 
@@ -55,4 +55,23 @@ public class ProgramTest {
         // Expecting false since the exercises only contains strength and exercise class.
         assertFalse(testProgram1.isBalanced());
     }
+
+    @Test
+    public void totalDuration() {
+        ArrayList<Exercise> exercises = new ArrayList<>();
+        Program testProgram1 = new Program("Test program 2");
+
+        exercises.add(strength1);
+        exercises.add(strength2);
+        exercises.add(strength3);
+        exercises.add(testExercise);
+        testProgram1.addExercise(exercises);
+
+        // (30 + 15 + 10 + 2) * 2 = 57
+        int expected = 114;
+
+        assertEquals("Checks the total duration", expected, testProgram1.getDuration());
+
+    }
+
 }

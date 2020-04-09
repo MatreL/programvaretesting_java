@@ -88,6 +88,11 @@ public class Program {
     public boolean isBalanced() {
         return isBalanced;
     }
+
+    public int getDuration() {
+        return duration;
+    }
+
 }
 
 
