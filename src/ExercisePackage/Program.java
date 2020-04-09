@@ -81,6 +81,13 @@ public class Program {
         return intensity;
     }
 
+    public int getIntensity() {
+        return intensity;
+    }
+
+    public boolean isBalanced() {
+        return isBalanced;
+    }
 }
 
 
