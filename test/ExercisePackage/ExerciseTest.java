@@ -22,7 +22,6 @@ public class ExerciseTest {
 
         assertTrue("Error, intensity is too high", high >= testExercise.intensity);
         assertTrue("Error, intensity is too low",  low  <= testExercise.intensity);
-        System.out.println("Test passed: " + testExercise.intensity + " is within " + high + " and " + low);
     }
 
     // Checking if name is empty
@@ -68,12 +67,11 @@ public class ExerciseTest {
 
         assertFalse("Negative numbers is not allowed",  lowNumber  > testExercise.intensity ||
                 lowNumber > testExercise.sets || lowNumber > testExercise.repetitions || lowNumber > testExercise.duration);
-        System.out.println("Test passed: None of the numbers are below zero");
     }
 
     @Test
     public void alphabeticStrings() {
-        boolean isNAN = false;
+        boolean isNAN;
 
         // Creates a regex to include what is allowed in the strings
         String regex = "^[A-Za-z\\s-]+$";
