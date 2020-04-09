@@ -66,7 +66,7 @@ public class ProgramTest {
         exercises.add(testExercise);
         testProgram1.addExercise(exercises);
 
-        // (30 + 15 + 10 + 2) * 2 = 57
+        // (30 + 15 + 10 + 2) * 2 = 114
         int expected = 114;
 
         assertEquals("Checks the total duration", expected, testProgram1.getDuration());
