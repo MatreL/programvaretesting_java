@@ -20,7 +20,6 @@ public class Program {
             if (this.intensity < exercises.get(i).intensity) {
                 this.intensity = exercises.get(i).intensity;
             }
-
         }
         if (hasExercise("Endurance")
                 && hasExercise("Balance")
@@ -28,8 +27,6 @@ public class Program {
                 && hasExercise("Strength")) {
             this.isBalanced = true;
         }
-
-
     }
 
 
