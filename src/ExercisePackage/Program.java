@@ -4,6 +4,7 @@ import java.util.Collections;
 
 public class Program {
     private ArrayList<Exercise> exercises = new ArrayList<>();
+    public ArrayList<Program> programs = new ArrayList<>();
     private String programName;
     private int intensity = 0;
     private int duration = 0;
@@ -27,6 +28,19 @@ public class Program {
                 && hasExercise("Strength")) {
             this.isBalanced = true;
         }
+    }
+    public void addProgram (ArrayList<Program> programs){
+        this.programs = programs;
+        String programName = this.programName;
+        int highestIntensity = this.intensity;
+        for (int i = 0; i<programs.size(); i++){
+            System.out.println(programs.get(i));
+        }
+
+
+
+
+
     }
 
 
@@ -62,6 +76,9 @@ public class Program {
         }
         System.out.println("The highest intensity is: " + this.intensity);
 
+    }
+    public int getHighestIntensity(){
+        return intensity;
     }
 
 }

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Person {
 
-    public ArrayList<Exercise> programs = new ArrayList<>();
     public String preferredExercise;
     public int acceptableIntensity;
     public Object acceptableProgram;
+
 
     public Person(String preferredExercise, int acceptableIntensity, Object acceptableProgram) {
         this.acceptableIntensity = acceptableIntensity;
