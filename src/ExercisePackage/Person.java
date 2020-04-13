@@ -27,7 +27,7 @@ public class Person {
                     mellomlagring +=1;
                 }
             }
-            mellomlagring = score;
+            score = mellomlagring;
             return mellomlagring;
 
         }
@@ -52,8 +52,8 @@ public class Person {
         for (int i = 0; i < prog.size(); i++) {
            this.singleProgramIsAppropiateForPerson(prog.get(i));
            if (score>programScore){
-               score = programScore;
-               currentBestProgram = prog.getClass().getName().;
+               programScore = score;
+               currentBestProgram = prog.getClass().getName();
            }
 
             }
