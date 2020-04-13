@@ -71,11 +71,9 @@ public class MainClass {
         Program p2 = new Program("Program nr 2");
         programs.add(p2);
         exercises.clear();
-        exercises.add(strength2);
         exercises.add(flex3);
         exercises.add(flex1);
         exercises.add(flex2);
-        exercises.add(strength1);
         p2.addExercise(exercises);
         p2.print();
 

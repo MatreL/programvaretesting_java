@@ -53,7 +53,7 @@ public class Person {
            this.singleProgramIsAppropiateForPerson(prog.get(i));
            if (score>programScore){
                programScore = score;
-               currentBestProgram = prog.getClass().getName();
+               currentBestProgram = prog.get(i).getProgramName();
            }
 
             }
