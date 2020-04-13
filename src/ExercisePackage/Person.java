@@ -21,7 +21,7 @@ public class Person {
     private int exerciseIsPreffered(Program prog){
             int mellomlagring = 0;
             for (int i = 0;i<prog.getExercises().size(); i++){
-                if (prog.getExercises().get(i).getClass().getName().equalsIgnoreCase(preferredExercise)){
+                if (prog.getExercises().get(i).getType().equalsIgnoreCase(preferredExercise)){
                     mellomlagring +=1;
                 }
             }
