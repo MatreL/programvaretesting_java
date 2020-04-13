@@ -7,7 +7,7 @@ public class Program {
     private String programName;
     private int intensity = 0;
     private int duration = 0;
-    private boolean isBalanced;
+    public boolean isBalanced;
 
     public Program(String programName) {
         this.programName = programName;
@@ -97,6 +97,9 @@ public class Program {
       return this.exercises;
     }
 
+    public int getDuration() {
+        return duration;
+    }
 }
 
 

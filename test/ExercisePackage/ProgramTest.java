@@ -36,7 +36,7 @@ public class ProgramTest {
         testProgram1.addExercise(exercises);
 
         // Expects 9 to be the highest intensity after checking manually in the strength-exercises made in setup()
-        assertEquals("Testing to see if the highest intensity in addExercise is working",9, testProgram1.getIntensity());
+        assertEquals("Testing to see if the highest intensity in addExercise is working",9, testProgram1.getHighestIntensity());
     }
 
     @Test
@@ -52,7 +52,7 @@ public class ProgramTest {
         testProgram1.addExercise(exercises);
 
         // Expecting false since the exercises only contains strength and exercise class.
-        assertFalse(testProgram1.isBalanced());
+        assertFalse(testProgram1.isBalanced);
     }
 
     @Test
