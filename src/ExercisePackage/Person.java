@@ -18,6 +18,8 @@ public class Person {
         emptyOrNegativeInt();
     }
 
+    public int score = 0;
+
     private int exerciseIsPreffered(Program prog){
             int mellomlagring = 0;
             for (int i = 0;i<prog.getExercises().size(); i++){
@@ -25,6 +27,7 @@ public class Person {
                     mellomlagring +=1;
                 }
             }
+            mellomlagring = score;
             return mellomlagring;
 
         }
@@ -41,21 +44,27 @@ public class Person {
         return false;
     }
 
-    public boolean reccomendProgramForSinglePerson(ArrayList<Program> prog) {
+    public void reccomendProgramForSinglePerson(ArrayList<Program> prog) {
         // Reccomend a program for one person
         // And set it to current program
-        boolean mellomlagring;
+        int programScore = 0;
+        String currentBestProgram = "mellomlagring";
         for (int i = 0; i < prog.size(); i++) {
-            mellomlagring = this.singleProgramIsAppropiateForPerson(prog.get(i));
-            if (mellomlagring == true) {
-                acceptableProgram = mellomlagring;
-                return true;
+           this.singleProgramIsAppropiateForPerson(prog.get(i));
+           if (score>programScore){
+               score = programScore;
+               currentBestProgram = prog.getClass().getName().;
+           }
+
             }
+        System.out.println(currentBestProgram);
 
 
         }
-        return false;
-    }
+
+
+
+
 
 
 
@@ -96,6 +105,7 @@ public class Person {
                     " flexibility or strength!");
         }
     }
+
 
 /*
     public boolean isSetAcceptableProgram(ArrayList<Program> ex) {

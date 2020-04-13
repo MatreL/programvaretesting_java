@@ -64,12 +64,28 @@ public class MainClass {
         exercises.add(flex1);
         exercises.add(endurance1);
         exercises.add(balance1);
+        exercises.add(balance2);
         p1.addExercise(exercises);
         p1.print();
 
-        Person Erik = new Person("Balance", 10);
+        Program p2 = new Program("Program nr 2");
+        programs.add(p2);
+        exercises.clear();
+        exercises.add(strength2);
+        exercises.add(flex3);
+        exercises.add(flex1);
+        exercises.add(flex2);
+        exercises.add(strength1);
+        p2.addExercise(exercises);
+        p2.print();
+
+
+        Person Erik = new Person("Flexibility", 10);
 
         System.out.println(Erik.singleProgramIsAppropiateForPerson(p1));
+        Erik.reccomendProgramForSinglePerson(programs);
+
+
 
 
 

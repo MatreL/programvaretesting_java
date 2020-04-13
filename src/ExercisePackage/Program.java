@@ -100,6 +100,9 @@ public class Program {
     public int getDuration() {
         return duration;
     }
+    public String getProgramName(){
+        return programName;
+    }
 }
 
 
