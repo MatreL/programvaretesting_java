@@ -16,7 +16,7 @@ public class PersonTest {
 
     @Test
     public void alphabeticStrings() {
-        boolean isNAN = false;
+        boolean isNAN;
 
         // Creates a regex to include what is allowed in the strings
         String regex = "^[A-Za-z\\s-]+$";

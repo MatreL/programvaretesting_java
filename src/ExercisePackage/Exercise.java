@@ -69,10 +69,10 @@ public class Exercise {
             throw new IllegalArgumentException("We only accept uppercase, lowercase, space and/or dash when inserting " +
                     "values to name and equipment");
         }
-
     }
 
     public int getIntensity() {
         return intensity;
     }
+
 }
