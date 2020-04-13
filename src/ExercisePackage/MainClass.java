@@ -67,7 +67,7 @@ public class MainClass {
         p1.addExercise(exercises);
         p1.print();
 
-        Person Erik = new Person("Endurance", 10);
+        Person Erik = new Person("Balance", 10);
 
         System.out.println(Erik.singleProgramIsAppropiateForPerson(p1));
 
