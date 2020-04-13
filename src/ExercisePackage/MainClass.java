@@ -20,16 +20,58 @@ public class MainClass {
         Exercise balance1 = new Balance("Handstand", "Mat", 8, 10, 10, 3);
         Exercise balance2 = new Balance("Headstand","Thick mat", 5, 15, 7, 2);
         Exercise balance3 = new Balance( "LineWalk","Slackline", 6, 1, 15, 4);
+/*
+        public void suggestProgramsForAllPersons(){
+         //Print suggested program for all persons
+        return true;
+        }
+
+ */
+
+/*
+
+        public boolean SetAcceptableProgram(ArrayList<Program> ex) {
+
+            boolean containsProgramWithIntensity = false;
+
+            for (int x = 0; x < ex.size(); x++) {
+
+                if (acceptableIntensity == ex.get(x).getIntensity() || acceptableIntensity + 1 == ex.get(x).getIntensity()
+                        || acceptableIntensity - 1 == ex.get(x).getIntensity()) {
+
+                    if (preferredExercise.equals(ex.get(x).getType())) {
+
+                        System.out.println("------------------------");
+                    }
+
+                    containsProgramWithIntensity = true;
+                }
+            }
+
+            if (!containsProgramWithIntensity) {
+                throw new IllegalArgumentException("There are no programs with this intensity..");
+            }
+        }
+
+ */
 
         ArrayList<Exercise> exercises = new ArrayList<>();
+        ArrayList<Program> programs = new ArrayList<>();
 
         Program p1 = new Program("Program nr 1");
+        programs.add(p1);
         exercises.add(strength1);
         exercises.add(flex1);
         exercises.add(endurance1);
         exercises.add(balance1);
         p1.addExercise(exercises);
         p1.print();
+
+        Person Erik = new Person("Endurance", 10);
+
+        System.out.println(Erik.singleProgramIsAppropiateForPerson(p1));
+
+
 
 
 

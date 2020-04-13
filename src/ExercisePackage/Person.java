@@ -4,20 +4,61 @@ import java.util.ArrayList;
 
 public class Person {
 
-    public String preferredExercise;
-    public int acceptableIntensity;
-    public Object acceptableProgram;
+    private String preferredExercise;
+    private int acceptableIntensity;
+    private Object acceptableProgram;
 
 
-    public Person(String preferredExercise, int acceptableIntensity, Object acceptableProgram) {
+    public Person(String preferredExercise, int acceptableIntensity) {
         this.acceptableIntensity = acceptableIntensity;
         this.preferredExercise = preferredExercise;
-        this.acceptableProgram = acceptableProgram;
 
         getPreferredExercise();
         emptyString();
         emptyOrNegativeInt();
     }
+
+    private int exerciseIsPreffered(Program prog){
+            int mellomlagring = 0;
+            for (int i = 0;i<prog.getExercises().size(); i++){
+                if (prog.getExercises().get(i).getClass().getName().equalsIgnoreCase(preferredExercise)){
+                    mellomlagring +=1;
+                }
+            }
+            return mellomlagring;
+
+        }
+
+    public boolean singleProgramIsAppropiateForPerson(Program prog) {
+        //return true if program is acceptable for person
+        if (prog.getHighestIntensity() == acceptableIntensity ||
+                prog.getHighestIntensity() == acceptableIntensity + 1 ||
+                prog.getHighestIntensity() == acceptableIntensity - 1) {
+            if(exerciseIsPreffered(prog)>0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean reccomendProgramForSinglePerson(ArrayList<Program> prog) {
+        // Reccomend a program for one person
+        // And set it to current program
+        boolean mellomlagring;
+        for (int i = 0; i < prog.size(); i++) {
+            mellomlagring = this.singleProgramIsAppropiateForPerson(prog.get(i));
+            if (mellomlagring == true) {
+                acceptableProgram = mellomlagring;
+                return true;
+            }
+
+
+        }
+        return false;
+    }
+
+
+
 
     public void emptyString() {
         if (preferredExercise.equals("")) {
@@ -56,8 +97,8 @@ public class Person {
         }
     }
 
-
-    public void setAcceptableProgram(ArrayList<Exercise> ex) {
+/*
+    public boolean isSetAcceptableProgram(ArrayList<Program> ex) {
 
         boolean containsProgramWithIntensity = false;
 
@@ -80,27 +121,7 @@ public class Person {
         }
     }
 
-    public static void main(String[] args) {
+ */
 
-        Person p1 = new Person("Strength",4,10);
-
-        Exercise Olav = new Strength("Man one","Bench",3,30,8,4,100);
-        Exercise Peder = new Flexibility("Man two","Yoga pants",9,60,10,3);
-        Exercise Even = new Endurance( "Man tRe", "Shoes",5, 30, 10, 2 );
-        Exercise Alex = new Balance( "Man-fire","Fitness ball", 2, 1, 15, 4);
-        Exercise Erik = new Strength("Bench press","Bench",5,30,8,4,100);
-
-
-        ArrayList<Exercise> exercises = new ArrayList<>();
-
-        exercises.add(Alex);
-        exercises.add(Even);
-        exercises.add(Peder);
-        exercises.add(Olav);
-        exercises.add(Erik);
-
-
-        p1.setAcceptableProgram(exercises);
-    }
 
 }
