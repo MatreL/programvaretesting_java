@@ -13,25 +13,35 @@ public class Program {
         this.programName = programName;
     }
 
-    public void addExercise(ArrayList<Exercise> exercises) {
-        this.exercises = exercises;
-        for (int i = 0; i < exercises.size(); i++) {
-            this.duration += exercises.get(i).duration * 2;
-            if (this.intensity < exercises.get(i).intensity) {
-                this.intensity = exercises.get(i).intensity;
+    public void addExercise(Exercise exercise) {
+        this.exercises.add(exercise);
+        for (int i = 0; i < this.exercises.size(); i++) {
+            this.duration += this.exercises.get(i).duration * 2;
+            if (this.intensity < this.exercises.get(i).intensity) {
+                this.intensity = this.exercises.get(i).intensity;
             }
 
         }
+
+        if(this.isBalanced != true) {
+            isBalanced();
+        }
+
+
+    }
+
+    public boolean isBalanced() {
         if (hasExercise("Endurance")
                 && hasExercise("Balance")
                 && hasExercise("Flexibility")
                 && hasExercise("Strength")) {
             this.isBalanced = true;
         }
+        return isBalanced;
+    }
  //       addProgram(programs);
 
 
-    }
     /*
     public void addProgram (ArrayList<Program> programs){
         this.programs = programs;
