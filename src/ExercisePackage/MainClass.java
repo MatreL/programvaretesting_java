@@ -21,14 +21,6 @@ public class MainClass {
         Exercise balance2 = new Balance("Headstand","Thick mat", 5, 15, 7, 2);
         Exercise balance3 = new Balance( "LineWalk","Slack line", 6, 1, 15, 4);
 
-/*
-        public void suggestProgramsForAllPersons(){
-            //Print suggested program for all persons
-
-        }
-
- */
-
         ArrayList<Person> persons = new ArrayList<>();
         ArrayList<Exercise> exercises = new ArrayList<>();
         ArrayList<Program> programs = new ArrayList<>();
@@ -61,3 +53,4 @@ public class MainClass {
 
     }
 }
+

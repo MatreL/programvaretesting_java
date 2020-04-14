@@ -98,5 +98,11 @@ public class Person {
         }
     }
 
+    public String getThePreferredExercise() {
+        return preferredExercise;
+    }
 
+    public int getAcceptableIntensity() {
+        return acceptableIntensity;
+    }
 }

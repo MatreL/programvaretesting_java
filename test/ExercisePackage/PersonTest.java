@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/*
+
 public class PersonTest {
     Person p1;
 
@@ -21,7 +21,7 @@ public class PersonTest {
         // Creates a regex to include what is allowed in the strings
         String regex = "^[A-Za-z\\s-]+$";
 
-        isNAN = p1.preferredExercise.matches(regex);
+        isNAN = p1.getThePreferredExercise().matches(regex);
         assertTrue("Checking that preferredExercise only contains letters and space", isNAN);
     }
 
@@ -29,7 +29,7 @@ public class PersonTest {
     public void stringNotEmpty() {
         boolean stringNotEmpty = true;
 
-        if (p1.preferredExercise.equals("")) {
+        if (p1.getThePreferredExercise().equals("")) {
             stringNotEmpty = false;
         }
 
@@ -40,7 +40,7 @@ public class PersonTest {
     public void checksNegativeIntsOrEmpty() {
         boolean intNotEmpty = true;
 
-        if (p1.acceptableIntensity <= 0) {
+        if (p1.getAcceptableIntensity() <= 0) {
             intNotEmpty = false;
         }
 
@@ -48,5 +48,3 @@ public class PersonTest {
     }
 
 }
-
- */
