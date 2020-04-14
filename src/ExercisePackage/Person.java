@@ -44,7 +44,7 @@ public class Person {
         return false;
     }
 
-    public void reccomendProgramForSinglePerson(ArrayList<Program> prog) {
+    public String reccomendProgramForSinglePerson(ArrayList<Program> prog) {
         // Reccomend a program for one person
         // And set it to current program
         int programScore = 0;
@@ -57,7 +57,7 @@ public class Person {
             }
 
         }
-        System.out.println("The best program is: " + acceptableProgram);
+        return "The best program is: " + acceptableProgram;
 
         }
 
@@ -105,4 +105,5 @@ public class Person {
     public int getAcceptableIntensity() {
         return acceptableIntensity;
     }
+
 }
