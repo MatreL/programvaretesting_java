@@ -62,13 +62,6 @@ public class Person {
 
         }
 
-
-
-
-
-
-
-
     public void emptyString() {
         if (preferredExercise.equals("")) {
             throw new IllegalArgumentException("You need to write your name!");
@@ -105,33 +98,11 @@ public class Person {
                     " flexibility or strength!");
         }
     }
-
-
-/*
-    public boolean isSetAcceptableProgram(ArrayList<Program> ex) {
-
-        boolean containsProgramWithIntensity = false;
-
-        for (int x = 0; x < ex.size(); x++) {
-
-            if (acceptableIntensity == ex.get(x).getIntensity() || acceptableIntensity + 1 == ex.get(x).getIntensity()
-                    || acceptableIntensity - 1 == ex.get(x).getIntensity()) {
-
-                if (preferredExercise.equals(ex.get(x).getType())) {
-
-                    System.out.println("------------------------");
-                }
-
-                containsProgramWithIntensity = true;
-            }
-        }
-
-        if (!containsProgramWithIntensity) {
-            throw new IllegalArgumentException("There are no programs with this intensity..");
+    public void prefferedProgramForPersons(ArrayList<Person> persons, ArrayList<Program> programs){
+        for (int i = 0; i<persons.size();i++){
+            this.reccomendProgramForSinglePerson(programs);
         }
     }
-
- */
 
 
 }
