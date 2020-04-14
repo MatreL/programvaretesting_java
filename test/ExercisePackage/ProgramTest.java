@@ -13,7 +13,6 @@ public class ProgramTest {
         strength1 = new Strength("Bench press","Bench",2,30,8,4,100);
         strength2 = new Strength("Pull ups", "Pull-up-bar", 9, 15, 10, 5, 15);
         strength3 = new Strength("Biceps curl", "Manuals", 7, 10, 10,3, 22.5);
-        testExercise = new Exercise("Exercise","workout-clothes", 8, 2, 8,4);
 
         flex1 = new Flexibility("Shoulder stretch", "Stretch-Out-Strap", 7, 5, 4, 4);
         endurance1 = new Endurance("Cycling", "Bicycle", 10, 60, 3, 3);
@@ -28,7 +27,7 @@ public class ProgramTest {
         testProgram1.addExercise(strength1);
         testProgram1.addExercise(strength2);
         testProgram1.addExercise(strength3);
-        testProgram1.addExercise(testExercise);
+        testProgram1.addExercise(balance2);
 
         // Expects 9 to be the highest intensity after checking manually in the strength-exercises made in setup()
         assertEquals("Testing to see if the highest intensity in addExercise is working",9, testProgram1.getHighestIntensity());
@@ -41,7 +40,7 @@ public class ProgramTest {
         testProgram1.addExercise(strength1);
         testProgram1.addExercise(strength2);
         testProgram1.addExercise(strength3);
-        testProgram1.addExercise(testExercise);
+        testProgram1.addExercise(balance2);
 
         // Expecting false since the exercises only contains strength and exercise class.
         assertFalse(testProgram1.isBalanced);
@@ -93,10 +92,10 @@ public class ProgramTest {
         testProgram1.addExercise(strength1);
         testProgram1.addExercise(strength2);
         testProgram1.addExercise(strength3);
-        testProgram1.addExercise(testExercise);
+        testProgram1.addExercise(balance2);
 
-        // (30 + 15 + 10 + 2) * 2 = 114
-        int expected = 114;
+        // (30 + 15 + 10 + 15) * 2 = 140
+        int expected = 140;
 
         assertEquals("Checks the total duration", expected, testProgram1.totalDuration());
 

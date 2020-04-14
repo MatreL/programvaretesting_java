@@ -1,6 +1,6 @@
 package ExercisePackage;
 
-public class Exercise {
+public abstract class Exercise {
     public int intensity, duration, repetitions, sets;
     public String name, equipment;
 

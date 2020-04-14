@@ -10,7 +10,7 @@ public class ExerciseTest {
 
     @Before
     public void setup() {
-        testExercise = new Exercise("Exercise","workout-clothes", 7, 2, 8,4);
+        testExercise = new Balance("Headstand","Mat", 7, 2, 8,4);
     }
 
     // Checking if intensity is between 0 and 10
