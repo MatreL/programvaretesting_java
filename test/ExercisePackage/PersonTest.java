@@ -46,7 +46,9 @@ public class PersonTest {
         programs.add(program1);
         programs.add(program2);
 
-        assertEquals(p1.reccomendProgramForSinglePerson(programs), "The best program is: Program one");
+        p1.reccomendProgramForSinglePerson(programs);
+
+        assertEquals(p1.getAcceptableProgram(), "Program one");
 
     }
 

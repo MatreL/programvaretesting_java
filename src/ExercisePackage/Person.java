@@ -109,4 +109,7 @@ public class Person {
         return acceptableIntensity;
     }
 
+    public Object getAcceptableProgram() {
+        return acceptableProgram;
+    }
 }
