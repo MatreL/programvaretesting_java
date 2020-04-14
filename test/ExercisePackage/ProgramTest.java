@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 public class ProgramTest {
 
-    Exercise testExercise, strength1, strength2, strength3, flex1, endurance1, balance2;
+    Exercise strength1, strength2, strength3, flex1, endurance1, balance2;
 
     @Before
     public void setup() {
@@ -63,12 +63,13 @@ public class ProgramTest {
 
         for (int i = 0; i < testExercises.size() - 1; i++) {
             if (testExercises.get(i).intensity < testExercises.get(i + 1).intensity) {
+                break;
             } else {
                 intensityIsSorted = false;
             }
         }
 
-        assertTrue("Tests that the arraylist is sorted by intensity", intensityIsSorted);
+        assertTrue("Tests that the array list is sorted by intensity", intensityIsSorted);
 
     }
 
