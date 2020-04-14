@@ -8,21 +8,44 @@ import static org.junit.Assert.*;
 
 public class PersonTest {
     Person p1;
+    Exercise endurance1, strength1, strength2, strength3;
+    Program program1;
 
     @Before
     public void setup() {
         p1 = new Person("Strength",8);
+        strength1 = new Strength("Bench press","Bench",2,30,8,4,100);
+        strength2 = new Strength("Pull ups", "Pull-up-bar", 9, 15, 10, 5, 15);
+        strength3 = new Strength("Biceps curl", "Manuals", 7, 10, 10,3, 22.5);
+        endurance1 = new Endurance("Cycling", "Bicycle", 10, 60, 3, 3);
+
+        program1 = new Program("This is a program");
 
     }
 
     @Test
     public void exerciseIntensityIsCorrect(){
-        Program program1 = new Program("This is a program");
-        Exercise ex1 = new Strength("Bench-press", "Bench", 7, 40, 4, 3, 500);
-        program1.addExercise(ex1);
+        program1.addExercise(strength1);
+        program1.addExercise(strength2);
 
-        assertTrue(p1.singleProgramIsAppropiateForPerson(program1));
+        assertTrue("Checks that exercises are appropriate for the persons preferred intensity",p1.singleProgramIsAppropiateForPerson(program1));
     }
+
+    @Test
+    public void checksScoreFromPreferredExercise() {
+
+        program1.addExercise(strength1);
+        program1.addExercise(strength2);
+        program1.addExercise(strength3);
+        program1.addExercise(endurance1);
+
+        int actual = p1.exerciseIsPreffered(program1);
+        int expected = 3;
+
+        // Expects three cases of the type strength in program 1
+        assertEquals("Checks score for the times class-type-strength is in program1",expected,actual);
+    }
+
 
     @Test
     public void alphabeticStrings() {

@@ -20,7 +20,7 @@ public class Person {
 
     public int score = 0;
 
-    private int exerciseIsPreffered(Program prog){
+    public int exerciseIsPreffered(Program prog){
             int mellomlagring = 0;
             for (int i = 0;i<prog.getExercises().size(); i++){
                 if (prog.getExercises().get(i).getType().equalsIgnoreCase(preferredExercise)){
