@@ -16,18 +16,14 @@ public class Program {
     public void addExercise(Exercise exercise) {
         this.exercises.add(exercise);
         for (int i = 0; i < this.exercises.size(); i++) {
-            this.duration += this.exercises.get(i).duration * 2;
             if (this.intensity < this.exercises.get(i).intensity) {
                 this.intensity = this.exercises.get(i).intensity;
             }
-
         }
 
         if(this.isBalanced != true) {
             isBalanced();
         }
-
-
     }
 
     public boolean isBalanced() {
@@ -39,6 +35,7 @@ public class Program {
         }
         return isBalanced;
     }
+
  //       addProgram(programs);
 
 
@@ -66,6 +63,15 @@ public class Program {
 
      */
 
+    public int totalDuration() {
+        for (int i = 0; i < exercises.size(); i++) {
+            this.duration += this.exercises.get(i).duration;
+        }
+        this.duration = duration * 2;
+
+        return duration;
+    }
+
 
     public boolean hasExercise (String param) {
         for (Exercise e:exercises) {
@@ -88,9 +94,9 @@ public class Program {
         System.out.print("And this is the exercises: \n" );
         for (int i = 0; i<exercises.size();i++){
             System.out.print(exercises.get(i).print() + "\n\n");
-
         }
-        System.out.print("This is the total duration: " + this.duration + "\n");
+
+        System.out.print("This is the total duration: " + totalDuration() + "\n");
         if(isBalanced == true){
             System.out.print("The program is balanced\n");
         }
