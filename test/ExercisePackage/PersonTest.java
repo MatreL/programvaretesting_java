@@ -12,6 +12,16 @@ public class PersonTest {
     @Before
     public void setup() {
         p1 = new Person("Strength",8);
+
+    }
+
+    @Test
+    public void exerciseIntensityIsCorrect(){
+        Program program1 = new Program("This is a program");
+        Exercise ex1 = new Strength("Bench-press", "Bench", 7, 40, 4, 3, 500);
+        program1.addExercise(ex1);
+
+        assertTrue(p1.singleProgramIsAppropiateForPerson(program1));
     }
 
     @Test
