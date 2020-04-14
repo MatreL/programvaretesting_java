@@ -37,7 +37,7 @@ public class PersonTest {
     }
 
     @Test
-    public void checksNegativeIntsOrEmpty() {
+    public void negativeOrEmptyInts() {
         boolean intNotEmpty = true;
 
         if (p1.getAcceptableIntensity() <= 0) {
@@ -46,5 +46,6 @@ public class PersonTest {
 
         assertTrue("Checking if acceptableIntensity is smaller or equal to 0", intNotEmpty);
     }
+
 
 }

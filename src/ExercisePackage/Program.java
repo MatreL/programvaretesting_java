@@ -1,6 +1,7 @@
 package ExercisePackage;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Program {
     private ArrayList<Exercise> exercises = new ArrayList<>();
@@ -21,7 +22,7 @@ public class Program {
             }
         }
 
-        if(this.isBalanced != true) {
+        if(!this.isBalanced) {
             isBalanced();
         }
     }
@@ -83,7 +84,7 @@ public class Program {
     }
 
     public void sortExercise(){
-        Collections.sort(exercises, (o1, o2) -> (o1.getIntensity()) - (o2.getIntensity()));
+        Collections.sort(exercises, Comparator.comparingInt(Exercise::getIntensity));
     }
 
     public String printIsBalanced() {

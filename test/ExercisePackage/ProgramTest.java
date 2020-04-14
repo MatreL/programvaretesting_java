@@ -48,6 +48,32 @@ public class ProgramTest {
     }
 
     @Test
+    public void sortByIntensity() {
+        Program testProgram1 = new Program("Test program 2");
+
+        testProgram1.addExercise(strength1);
+        testProgram1.addExercise(flex1);
+        testProgram1.addExercise(endurance1);
+        testProgram1.addExercise(balance2);
+
+        testProgram1.sortExercise();
+
+        var testExercises = testProgram1.getExercises();
+
+        boolean intensityIsSorted = true;
+
+        for (int i = 0; i < testExercises.size() - 1; i++) {
+            if (testExercises.get(i).intensity < testExercises.get(i + 1).intensity) {
+            } else {
+                intensityIsSorted = false;
+            }
+        }
+
+        assertTrue("Tests that the arraylist is sorted by intensity", intensityIsSorted);
+
+    }
+
+    @Test
     public void exercisesIsBalanced() {
         Program testProgram1 = new Program("Test program 2");
 
