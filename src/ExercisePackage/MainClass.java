@@ -33,11 +33,6 @@ public class MainClass {
         ArrayList<Exercise> exercises = new ArrayList<>();
         ArrayList<Program> programs = new ArrayList<>();
 
-        public void prefferedProgramForPersons(ArrayList<Person> persons, ArrayList<Program> programs){
-            for (int i = 0; i<persons.size();i++){
-               reccomendProgramForSinglePerson(programs);
-            }
-        }
 
         Program p1 = new Program("Program nr 1");
         programs.add(p1);

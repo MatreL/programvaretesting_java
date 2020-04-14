@@ -98,11 +98,6 @@ public class Person {
                     " flexibility or strength!");
         }
     }
-    public void prefferedProgramForPersons(ArrayList<Person> persons, ArrayList<Program> programs){
-        for (int i = 0; i<persons.size();i++){
-            this.reccomendProgramForSinglePerson(programs);
-        }
-    }
 
 
 }
