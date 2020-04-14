@@ -1,7 +1,5 @@
 package ExercisePackage;
 
-import java.lang.annotation.Native;
-
 public class Balance extends Exercise {
 
     public Balance(String name, String equipment, int intensity, int duration, int repetitions, int sets) {

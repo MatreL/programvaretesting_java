@@ -1,6 +1,5 @@
 package ExercisePackage;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Program {
@@ -37,33 +36,6 @@ public class Program {
         return isBalanced;
     }
 
- //       addProgram(programs);
-
-
-    /*
-    public void addProgram (ArrayList<Program> programs){
-        this.programs = programs;
-        String programDetails;
-        int intensity = 0;
-        programDetails = "This is the programs\n\n";
-
-        String programName = this.programName;
-        int highestIntensity = this.intensity;
-        for (int i = 0; i<programs.size(); i++){
-            programs.get(i).programName += programDetails;
-            programs.get(i).intensity = intensity;
-            System.out.println(programDetails);
-
-        }
-
-
-
-
-
-    }
-
-     */
-
     public int totalDuration() {
         for (int i = 0; i < exercises.size(); i++) {
             this.duration += this.exercises.get(i).duration;
@@ -76,7 +48,7 @@ public class Program {
 
     public boolean hasExercise (String param) {
         for (Exercise e:exercises) {
-            if (e.getType() == param) {
+            if (e.getType().equals(param)) {
                 return true;
             }
         }
@@ -84,7 +56,7 @@ public class Program {
     }
 
     public void sortExercise(){
-        Collections.sort(exercises, Comparator.comparingInt(Exercise::getIntensity));
+        exercises.sort(Comparator.comparingInt(Exercise::getIntensity));
     }
 
     public String printIsBalanced() {
@@ -118,9 +90,6 @@ public class Program {
       return this.exercises;
     }
 
-    public int getDuration() {
-        return duration;
-    }
     public String getProgramName(){
         return programName;
     }
