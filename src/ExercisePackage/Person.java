@@ -48,17 +48,16 @@ public class Person {
         // Reccomend a program for one person
         // And set it to current program
         int programScore = 0;
-        String currentBestProgram = "mellomlagring";
+
         for (int i = 0; i < prog.size(); i++) {
-           this.singleProgramIsAppropiateForPerson(prog.get(i));
-           if (score>programScore){
-               programScore = score;
-               currentBestProgram = prog.get(i).getProgramName();
-           }
-
+            this.singleProgramIsAppropiateForPerson(prog.get(i));
+            if (score > programScore) {
+                programScore = score;
+                acceptableProgram = prog.get(i).getProgramName();
             }
-        System.out.println(currentBestProgram);
 
+        }
+        System.out.println("The best program is: " + acceptableProgram);
 
         }
 

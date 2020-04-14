@@ -57,15 +57,7 @@ public class MainClass {
         persons.add(Erik);
         persons.add(Bogdan);
 
-        System.out.println(Erik.singleProgramIsAppropiateForPerson(p1));
         Erik.reccomendProgramForSinglePerson(programs);
-
-
-
-
-
-
-
 
     }
 }

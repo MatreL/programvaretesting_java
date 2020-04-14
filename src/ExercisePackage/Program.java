@@ -86,26 +86,30 @@ public class Program {
         Collections.sort(exercises, (o1, o2) -> (o1.getIntensity()) - (o2.getIntensity()));
     }
 
+    public String printIsBalanced() {
+
+        if (isBalanced) {
+            return "The program is balanced";
+        } else {
+            return "The program is not balanced";
+        }
+    }
 
     public void print() {
         sortExercise();
         System.out.print("The name of the program is \n");
         System.out.print(programName + "\n");
         System.out.print("And this is the exercises: \n" );
-        for (int i = 0; i<exercises.size();i++){
-            System.out.print(exercises.get(i).print() + "\n\n");
+
+        for (Exercise exercise : exercises) {
+            System.out.print(exercise.print() + "\n\n");
         }
 
         System.out.print("This is the total duration: " + totalDuration() + "\n");
-        if(isBalanced == true){
-            System.out.print("The program is balanced\n");
-        }
-        else {
-            System.out.print("The program is not balanced\n");
-        }
-        System.out.println("The highest intensity is: " + this.intensity);
-
+        System.out.println(printIsBalanced());
+        System.out.println("The highest intensity is: " + this.intensity + "\n\n");
     }
+
     public int getHighestIntensity(){
         return intensity;
     }
