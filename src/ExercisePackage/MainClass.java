@@ -50,6 +50,7 @@ public class MainClass {
         persons.add(Bogdan);
 
         Erik.reccomendProgramForSinglePerson(programs);
+        Erik.printReccomendProgramForSinglePerson();
 
     }
 }
