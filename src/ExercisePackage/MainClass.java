@@ -38,7 +38,7 @@ public class MainClass {
 
         Person Peter = new Person("Flexibility", 10);
 
-        Peter.reccomendProgramForSinglePerson(programs);
+        Peter.recommendProgramForSinglePerson(programs);
         Peter.printReccomendProgramForSinglePerson();
 
     }

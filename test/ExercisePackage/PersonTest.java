@@ -30,7 +30,7 @@ public class PersonTest {
         program1.addExercise(strength1);
         program1.addExercise(strength2);
 
-        assertTrue("Checks that exercises are appropriate for the persons preferred intensity",p1.singleProgramIsAppropiateForPerson(program1));
+        assertTrue("Checks that exercises are appropriate for the persons preferred intensity",p1.singleProgramIsAppropriateForPerson(program1));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class PersonTest {
         programs.add(program1);
         programs.add(program2);
 
-        p1.reccomendProgramForSinglePerson(programs);
+        p1.recommendProgramForSinglePerson(programs);
 
         assertEquals(p1.getAcceptableProgram(), "Program one");
 
@@ -60,7 +60,7 @@ public class PersonTest {
         program1.addExercise(strength3);
         program1.addExercise(endurance1);
 
-        int actual = p1.exerciseIsPreffered(program1);
+        int actual = p1.exerciseIsPreferred(program1);
         int expected = 3;
 
         // Expects three cases of the type strength in program 1

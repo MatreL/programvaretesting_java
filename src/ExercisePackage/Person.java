@@ -20,7 +20,7 @@ public class Person {
 
     public int score = 0;
 
-    public int exerciseIsPreffered(Program prog){
+    public int exerciseIsPreferred(Program prog){
             int mellomlagring = 0;
             for (int i = 0;i<prog.getExercises().size(); i++){
                 if (prog.getExercises().get(i).getType().equalsIgnoreCase(preferredExercise)){
@@ -32,23 +32,23 @@ public class Person {
 
         }
 
-    public boolean singleProgramIsAppropiateForPerson(Program prog) {
+    public boolean singleProgramIsAppropriateForPerson(Program prog) {
         //return true if program is acceptable for person
         if (prog.getHighestIntensity() == acceptableIntensity ||
                 prog.getHighestIntensity() == acceptableIntensity + 1 ||
                 prog.getHighestIntensity() == acceptableIntensity - 1) {
-            return exerciseIsPreffered(prog) > 0;
+            return exerciseIsPreferred(prog) > 0;
         }
         return false;
     }
 
-    public void reccomendProgramForSinglePerson(ArrayList<Program> prog) {
+    public void recommendProgramForSinglePerson(ArrayList<Program> prog) {
         // Recommend a program for one person
         // And set it to current program
         int programScore = 0;
 
         for (Program program : prog) {
-            this.singleProgramIsAppropiateForPerson(program);
+            this.singleProgramIsAppropriateForPerson(program);
             if (score > programScore) {
                 programScore = score;
                 acceptableProgram = program.getProgramName();
