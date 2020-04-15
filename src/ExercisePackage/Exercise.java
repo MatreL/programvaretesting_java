@@ -18,6 +18,7 @@ public abstract class Exercise {
         emptyOrInvalidIntensity();
         onlyAllowLetters();
     }
+
     public String getType(){
         return "";
     }

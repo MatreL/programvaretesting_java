@@ -37,23 +37,21 @@ public class Person {
         if (prog.getHighestIntensity() == acceptableIntensity ||
                 prog.getHighestIntensity() == acceptableIntensity + 1 ||
                 prog.getHighestIntensity() == acceptableIntensity - 1) {
-            if(exerciseIsPreffered(prog)>0){
-                return true;
-            }
+            return exerciseIsPreffered(prog) > 0;
         }
         return false;
     }
 
     public void reccomendProgramForSinglePerson(ArrayList<Program> prog) {
-        // Reccomend a program for one person
+        // Recommend a program for one person
         // And set it to current program
         int programScore = 0;
 
-        for (int i = 0; i < prog.size(); i++) {
-            this.singleProgramIsAppropiateForPerson(prog.get(i));
+        for (Program program : prog) {
+            this.singleProgramIsAppropiateForPerson(program);
             if (score > programScore) {
                 programScore = score;
-                acceptableProgram = prog.get(i).getProgramName();
+                acceptableProgram = program.getProgramName();
             }
 
         }

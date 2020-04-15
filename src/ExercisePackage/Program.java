@@ -15,9 +15,9 @@ public class Program {
 
     public void addExercise(Exercise exercise) {
         this.exercises.add(exercise);
-        for (int i = 0; i < this.exercises.size(); i++) {
-            if (this.intensity < this.exercises.get(i).intensity) {
-                this.intensity = this.exercises.get(i).intensity;
+        for (Exercise value : this.exercises) {
+            if (this.intensity < value.intensity) {
+                this.intensity = value.intensity;
             }
         }
 
@@ -37,8 +37,8 @@ public class Program {
     }
 
     public int totalDuration() {
-        for (int i = 0; i < exercises.size(); i++) {
-            this.duration += this.exercises.get(i).duration;
+        for (Exercise exercise : exercises) {
+            this.duration += exercise.duration;
         }
         this.duration = duration * 2;
 
