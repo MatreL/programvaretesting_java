@@ -19,4 +19,20 @@ public class FlexibilityTest {
         assertEquals("Test to check that string equipment works", "Yoga mat", testFlexibility.equipment);
     }
 
+    @Test
+    public void testOutput() {
+
+        String expected = "Exercise: Lil p\nIntensity: 5" +
+                "\nDuration: 30\nRepetitions: 3 x 5\nEquipment: Yoga mat";
+
+        //Testing output of the program
+        assertEquals("Testing print() to display the right output",expected, testFlexibility.print());
+
+    }
+
+    @Test
+    public void testGetType() {
+        assertEquals("Testing getType() to return Flexibility","Flexibility", testFlexibility.getType());
+    }
+
 }

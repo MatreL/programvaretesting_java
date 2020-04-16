@@ -14,7 +14,7 @@ public class Strength extends Exercise {
 @Override
     public String print() {
         return   "Exercise: " + name + "\nIntensity: " + intensity + "\nDuration: " + duration + "\nRepetitions: " +
-            repetitions + " x " + sets + "\nEquipment: " + equipment;
+            repetitions + " x " + sets + "\nEquipment: " + equipment + "\nWeights: " + weightsInKg;
     }
 @Override
     public String getType(){
