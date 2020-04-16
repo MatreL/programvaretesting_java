@@ -101,5 +101,11 @@ public class PersonTest {
         assertTrue("Checking if acceptableIntensity is smaller or equal to 0", intNotEmpty);
     }
 
+    @Test
+    public void getsThePreferredExercise() {
+        assertEquals("Gets the preferred exercise Strength", "Strength",p1.getThePreferredExercise());
+    }
+
+
 
 }

@@ -99,7 +99,36 @@ public class ProgramTest {
         int expected = 140;
 
         assertEquals("Checks the total duration", expected, testProgram1.totalDuration());
+    }
 
+    @Test
+    public void checksPrintOfBalance() {
+
+        Program testProgram = new Program("Program number two");
+
+        testProgram.addExercise(strength1);
+        testProgram.addExercise(flex1);
+        testProgram.addExercise(balance2);
+        testProgram.addExercise(endurance1);
+
+        String expected = "The program is balanced";
+
+        // Expects program to be balanced
+        assertEquals("Expects program to print that it is balanced", expected, testProgram.printIsBalanced());
+    }
+
+    @Test
+    public void checksAndPrintsIfProgramIsNotBalanced() {
+        Program testProgram = new Program("Program number two");
+
+        testProgram.addExercise(strength1);
+        testProgram.addExercise(flex1);
+        testProgram.addExercise(balance2);
+
+        String expected = "The program is not balanced";
+
+        // Expects program to be unbalanced
+        assertEquals("Expects program to print that it is not balanced", expected, testProgram.printIsBalanced());
     }
 
 }

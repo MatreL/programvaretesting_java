@@ -57,7 +57,7 @@ public class Person {
         }
 
         }
-        public void printReccomendProgramForSinglePerson(){
+        public void printRecommendProgramForSinglePerson(){
         System.out.print("The best program is: ");
         System.out.println(acceptableProgram);
         }

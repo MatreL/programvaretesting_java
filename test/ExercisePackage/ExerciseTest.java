@@ -83,4 +83,19 @@ public class ExerciseTest {
         assertTrue("Checking if name and equipment only contains letters and space", isNAN);
     }
 
+    @Test
+    public void testPrint() {
+        // Expecting print to come from balance since type.equals(balance)
+        String output = "Exercise: Headstand\nIntensity: 7" +
+                "\nDuration: 2\nRepetitions: 8 x 4\nEquipment: Mat";
+
+        assertEquals("Expecting print to come from balance.java", output, testExercise.print());
+    }
+
+    @Test
+    public void getTypeTest() {
+        // Expecting getType to be balance
+        assertEquals("getType comes from balance.java", "Balance", testExercise.getType());
+    }
+
 }
