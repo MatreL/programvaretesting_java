@@ -3,6 +3,8 @@ package ExercisePackage;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -12,6 +14,12 @@ public class PersonTest {
     Person p1;
     Exercise endurance1, strength1, strength2, strength3;
     Program program1, program2;
+
+    // For testing output.. https://stackoverflow.com/questions/1119385/junit-test-for-system-out-println
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+    private final PrintStream originalErr = System.err;
 
     @Before
     public void setup() {
@@ -23,6 +31,14 @@ public class PersonTest {
 
         program1 = new Program("Program one");
         program2 = new Program("Program two");
+
+        program1.addExercise(strength1);
+        program1.addExercise(strength2);
+        program1.addExercise(strength3);
+        program1.addExercise(endurance1);
+
+        System.setOut(new PrintStream(outContent));
+        System.setErr(new PrintStream(errContent));
     }
 
     @Test
@@ -106,6 +122,18 @@ public class PersonTest {
         assertEquals("Gets the preferred exercise Strength", "Strength",p1.getThePreferredExercise());
     }
 
+    @Test
+    public void testPrintingRecommendedPrograms() {
 
+        ArrayList<Program> programs = new ArrayList<>();
+
+        programs.add(program1);
+
+        p1.recommendProgramForSinglePerson(programs);
+
+        p1.printRecommendProgramForSinglePerson();
+
+        assertEquals("There are no recommended programs..\n", outContent.toString());
+    }
 
 }

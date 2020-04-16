@@ -11,7 +11,7 @@ public class FlexibilityTest {
 
     @Before
     public void setup() {
-        testFlexibility = new Flexibility("Lil p", "Yoga mat", 5, 30, 3, 5);
+        testFlexibility = new Flexibility("Stretching", "Yoga mat", 5, 30, 3, 5);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class FlexibilityTest {
     @Test
     public void testOutput() {
 
-        String expected = "Exercise: Lil p\nIntensity: 5" +
+        String expected = "Exercise: Stretching\nIntensity: 5" +
                 "\nDuration: 30\nRepetitions: 3 x 5\nEquipment: Yoga mat";
 
         //Testing output of the program

@@ -58,9 +58,12 @@ public class Person {
 
         }
         public void printRecommendProgramForSinglePerson(){
-        System.out.print("The best program is: ");
-        System.out.println(acceptableProgram);
+        if (acceptableProgram == null ) {
+            System.out.println("There are no recommended programs..");
+        } else {
+            System.out.print("The best program is: " + acceptableProgram);
         }
+    }
 
     public void emptyString() {
         if (preferredExercise.equals("")) {
