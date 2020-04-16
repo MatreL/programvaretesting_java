@@ -34,7 +34,7 @@ public abstract class Exercise {
             throw new IllegalArgumentException("You need to give the exercise equipment!");
         }
     }
-//Method to prevents the user from declaring empty ints; duration, repetion and sets
+//Method to prevents the user from declaring empty ints; duration, repetition and sets
     public void emptyInt(){
         String valueMissing = "";
 

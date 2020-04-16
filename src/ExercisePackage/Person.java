@@ -53,7 +53,6 @@ public class Person {
                 programScore = score;
                 acceptableProgram = program.getProgramName();
             }
-
         }
 
         }

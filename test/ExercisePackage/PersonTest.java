@@ -18,8 +18,6 @@ public class PersonTest {
     // For testing output.. https://stackoverflow.com/questions/1119385/junit-test-for-system-out-println
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
-    private final PrintStream originalOut = System.out;
-    private final PrintStream originalErr = System.err;
 
     @Before
     public void setup() {
@@ -118,7 +116,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testPrintingRecommendedPrograms() {
+    public void testPrintingForNoRecommendedPrograms() {
 
         program1.addExercise(strength1);
         program1.addExercise(strength2);
@@ -134,6 +132,23 @@ public class PersonTest {
         p1.printRecommendProgramForSinglePerson();
 
         assertEquals("There are no recommended programs..\n", outContent.toString());
+    }
+
+    @Test
+    public void testingPrintingRecommendedPrograms() {
+        program1.addExercise(strength1);
+        program1.addExercise(strength2);
+        program1.addExercise(strength3);
+
+        ArrayList<Program> programs = new ArrayList<>();
+        programs.add(program1);
+
+        p1.recommendProgramForSinglePerson(programs);
+        p1.printRecommendProgramForSinglePerson();
+
+        String expected = "The best program is: Program one";
+
+        assertEquals(expected, outContent.toString());
     }
 
 }
