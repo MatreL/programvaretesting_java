@@ -32,11 +32,6 @@ public class PersonTest {
         program1 = new Program("Program one");
         program2 = new Program("Program two");
 
-        program1.addExercise(strength1);
-        program1.addExercise(strength2);
-        program1.addExercise(strength3);
-        program1.addExercise(endurance1);
-
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
@@ -124,6 +119,11 @@ public class PersonTest {
 
     @Test
     public void testPrintingRecommendedPrograms() {
+
+        program1.addExercise(strength1);
+        program1.addExercise(strength2);
+        program1.addExercise(strength3);
+        program1.addExercise(endurance1);
 
         ArrayList<Program> programs = new ArrayList<>();
 
