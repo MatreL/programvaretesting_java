@@ -131,4 +131,12 @@ public class ProgramTest {
         assertEquals("Expects program to print that it is not balanced", expected, testProgram.printIsBalanced());
     }
 
+    @Test
+    public void testsThatHasExercise() {
+        Program testProgram = new Program("Program number two");
+        testProgram.addExercise(strength1);
+
+        assertTrue("Tests to see if testprogram contains strength",testProgram.hasExercise("Strength"));
+    }
+
 }
