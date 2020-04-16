@@ -17,6 +17,7 @@ public class MainClass {
         Exercise balance2 = new Balance("Headstand","Thick mat", 5, 15, 7, 2);
 
         ArrayList<Program> programs = new ArrayList<>();
+        ArrayList<Person> persons = new ArrayList<>();
 
         Program p1 = new Program("Program nr 1");
         programs.add(p1);
@@ -37,6 +38,7 @@ public class MainClass {
 
 
         Person Peter = new Person("Flexibility", 10);
+        persons.add(Peter);
 
         Peter.recommendProgramForSinglePerson(programs);
         Peter.printReccomendProgramForSinglePerson();
