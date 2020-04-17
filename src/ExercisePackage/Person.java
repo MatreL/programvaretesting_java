@@ -58,13 +58,8 @@ public class Person {
         }
     }
 
-<<<<<<< HEAD
-    public void printRecommendProgramForSinglePerson(){
-=======
-        }
     //Method to print the reccomended program for a person
         public void printRecommendProgramForSinglePerson(){
->>>>>>> 82ead52cdccf33f5a09667caafa047bfea52e169
         if (acceptableProgram == null ) {
             System.out.println("There are no recommended programs..");
         } else {
