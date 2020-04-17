@@ -54,9 +54,9 @@ public class Person {
                 acceptableProgram = program.getProgramName();
             }
         }
+    }
 
-        }
-        public void printRecommendProgramForSinglePerson(){
+    public void printRecommendProgramForSinglePerson(){
         if (acceptableProgram == null ) {
             System.out.println("There are no recommended programs..");
         } else {

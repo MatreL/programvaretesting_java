@@ -39,7 +39,8 @@ public class PersonTest {
         program1.addExercise(strength1);
         program1.addExercise(strength2);
 
-        assertTrue("Checks that exercises are appropriate for the persons preferred intensity",p1.singleProgramIsAppropriateForPerson(program1));
+        assertTrue("Checks that exercises are appropriate for the persons preferred intensity"
+                            ,p1.singleProgramIsAppropriateForPerson(program1));
     }
 
     @Test
