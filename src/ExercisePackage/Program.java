@@ -8,11 +8,11 @@ public class Program {
     private int intensity = 0;
     private int duration = 0;
     public boolean isBalanced;
-
+//Constructor for Program class
     public Program(String programName) {
         this.programName = programName;
     }
-
+//Method to add an exercise to the program
     public void addExercise(Exercise exercise) {
         this.exercises.add(exercise);
         for (Exercise value : this.exercises) {
@@ -25,7 +25,7 @@ public class Program {
             isBalanced();
         }
     }
-
+//Method that checks if the program contain one of each exercise
     public boolean isBalanced() {
         if (hasExercise("Endurance")
                 && hasExercise("Balance")
@@ -35,7 +35,7 @@ public class Program {
         }
         return isBalanced;
     }
-
+//Method that sums up the total duration, and multiplies it with 2
     public int totalDuration() {
         for (Exercise exercise : exercises) {
             this.duration += exercise.duration;
@@ -45,7 +45,8 @@ public class Program {
         return duration;
     }
 
-
+//Method that is part of the isBalanced method. Iterates through the exercises, and returns true if
+//it is a match.
     public boolean hasExercise (String param) {
         for (Exercise e:exercises) {
             if (e.getType().equals(param)) {
@@ -54,11 +55,12 @@ public class Program {
         }
         return false;
     }
-
+// Method to sort the exercises in ascending order
     public void sortExercise(){
         exercises.sort(Comparator.comparingInt(Exercise::getIntensity));
     }
 
+//Part of the print method, print wherever the program is balanced or not
     public String printIsBalanced() {
 
         if (isBalanced) {
@@ -67,7 +69,7 @@ public class Program {
             return "The program is not balanced";
         }
     }
-
+//Print method for programs
     public void print() {
         sortExercise();
         System.out.print("The name of the program is \n");
