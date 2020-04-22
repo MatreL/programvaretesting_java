@@ -8,7 +8,7 @@ public class Person {
     private int acceptableIntensity;
     private Object acceptableProgram;
 
-//Construtor for the person class
+//Constructor for the person class
     public Person(String preferredExercise, int acceptableIntensity) {
         this.acceptableIntensity = acceptableIntensity;
         this.preferredExercise = preferredExercise;
@@ -19,7 +19,7 @@ public class Person {
     }
 
     public int score = 0;
-//Method to count number of preffered exercise, will run from the singleProgramIsAppropiateForPerson method
+//Method to count number of preferred exercise, will run from the singleProgramIsAppropriateForPerson method
     public int exerciseIsPreferred(Program prog){
             int mellomlagring = 0;
             for (int i = 0;i<prog.getExercises().size(); i++){
@@ -31,8 +31,8 @@ public class Person {
             return mellomlagring;
 
         }
-//Method to check if the intensity on the program is appropiate for the person.
-//If it is, it will run the exerciseIsPrefered method
+//Method to check if the intensity on the program is appropriate for the person.
+//If it is, it will run the exerciseIsPreferred method
     public boolean singleProgramIsAppropriateForPerson(Program prog) {
         //return true if program is acceptable for person
         if (prog.getHighestIntensity() == acceptableIntensity ||
@@ -43,7 +43,7 @@ public class Person {
         return false;
     }
 //Method to check multiple programs for one person. It will loop trough the programs and select the one
-// that are most appropiate
+// that are most appropriate
     public void recommendProgramForSinglePerson(ArrayList<Program> prog) {
         // Recommend a program for one person
         // And set it to current program
@@ -58,7 +58,7 @@ public class Person {
         }
     }
 
-    //Method to print the reccomended program for a person
+    //Method to print the recommended program for a person
         public void printRecommendProgramForSinglePerson(){
         if (acceptableProgram == null ) {
             System.out.println("There are no recommended programs..");
@@ -78,7 +78,7 @@ public class Person {
             throw new IllegalArgumentException("You need to set a number between 1-10 as an acceptable intensity");
         }
     }
-//Method to check that the preffered exercise is one of the valid ones. Strength, balance etc.
+//Method to check that the preferred exercise is one of the valid ones. Strength, balance etc.
     public void getPreferredExercise() {
 
         String[] acceptedPrefExercise = new String[4];
