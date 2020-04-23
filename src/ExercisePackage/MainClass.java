@@ -36,10 +36,10 @@ public class MainClass {
         p2.print();
 
 
-        Person Peter = new Person("Flexibility", 9);
+        Person Per = new Person("Flexibility", 9);
 
-        Peter.recommendProgramForSinglePerson(programs);
-        Peter.printRecommendProgramForSinglePerson();
+        Per.recommendProgramForSinglePerson(programs);
+        Per.printRecommendProgramForSinglePerson();
 
     }
 }
